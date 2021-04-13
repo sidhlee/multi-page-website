@@ -1,0 +1,13 @@
+@mixin text-style(
+  $ff: 'JosefinSans',
+  $fz: 1rem,
+  $fw: regular,
+  $lh: 1.6,
+  $ls: 0px
+) {
+  font-family: $ff;
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
