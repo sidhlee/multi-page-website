@@ -1,6 +1,8 @@
-# Planted
+# Bootcamp Project 1 - Multi-Page Site
 
-## Code
+## Project Requirement
+
+### Code
 
 - Site is responsive and uses media queries
 - Flexbox is used
@@ -17,7 +19,7 @@
 
 Additionally, you will be given a general mark on how well you adhere to best practices mentioned in class. Best practices include but may not be limited to this lesson.
 
-## Presentation
+### Presentation
 
 You will be presenting your project to the class on the day it's due. This is an opportunity for you to practice talking about your work in front of others, a skill that will be extremely vital in your job interviews once you begin your job search. The Career Services team will provide you with constructive feedback to help improve your technical communication skills as part of each projects evaluation.
 
