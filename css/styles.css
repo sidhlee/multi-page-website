@@ -1,3 +1,38 @@
+.sr-only:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0);
+  overflow: hidden;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+.accent {
+  color: #f8e71c;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -8,7 +43,7 @@ html {
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
-  line-height: 32px;
+  line-height: 1.6;
 }
 
 article,
@@ -35,84 +70,19 @@ figure {
   margin: 1em 40px;
 }
 
-hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
 }
 
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-b,
-strong {
-  font-weight: inherit;
-}
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-dfn {
-  font-style: italic;
-}
-
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-audio,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
+li {
+  list-style: none;
 }
 
 img {
@@ -189,61 +159,13 @@ textarea {
   overflow: auto;
 }
 
-[type='checkbox'],
-[type='radio'] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0;
-}
-
 [type='number']::-webkit-inner-spin-button,
 [type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-[type='search'] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-
-[type='search']::-webkit-search-cancel-button,
-[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-
-details,
-menu {
-  display: block;
-}
-
-summary {
-  display: list-item;
-}
-
-canvas {
-  display: inline-block;
-}
-
-template {
-  display: none;
-}
-
 [hidden] {
   display: none;
-}
-
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: '';
-  clear: both;
-  height: 0;
 }
 
 * {
@@ -251,43 +173,16 @@ template {
   box-sizing: border-box;
 }
 
-.visuallyHidden:not(:focus):not(:active) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0);
-  overflow: hidden;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.heading--xxl {
+.heading-xxl {
   font-family: "Josefin Sans";
-  font-size: 8.3rem;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 0.8;
   letter-spacing: 0px;
+  color: white;
 }
 
-.heading--xl {
+.heading-xl {
   font-family: "Josefin Sans";
   font-size: 4rem;
   font-weight: bold;
@@ -295,7 +190,7 @@ template {
   letter-spacing: 0px;
 }
 
-.heading--whatis {
+.heading-whatis {
   font-family: "Josefin Sans";
   font-size: 2.815rem;
   font-weight: bold;
@@ -303,7 +198,7 @@ template {
   letter-spacing: 0.065rem;
 }
 
-.heading--lg {
+.heading-lg {
   font-family: "Josefin Sans";
   font-size: 2.15rem;
   font-weight: bold;
@@ -311,7 +206,7 @@ template {
   letter-spacing: 0.065rem;
 }
 
-.heading--md {
+.heading-md {
   font-family: "Josefin Sans";
   font-size: 1.6rem;
   font-weight: bold;
@@ -319,7 +214,7 @@ template {
   letter-spacing: 0.05rem;
 }
 
-.heading--sm {
+.heading-sm {
   font-family: "Josefin Sans";
   font-size: 1rem;
   font-weight: bold;
@@ -327,11 +222,110 @@ template {
   letter-spacing: 0px;
 }
 
-.form--label {
+.form-label {
   font-family: "Josefin Sans";
   font-size: 1rem;
   font-weight: light;
   line-height: 1.6;
   letter-spacing: 0px;
+}
+
+@media (min-width: 700px) {
+  .heading-xxl {
+    font-family: "Josefin Sans";
+    font-size: 8.3rem;
+    font-weight: 400;
+    line-height: 0.8;
+    letter-spacing: 0px;
+  }
+  .heading-xl {
+    font-family: "Josefin Sans";
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.15;
+    letter-spacing: 0px;
+  }
+  .heading-whatis {
+    font-family: "Josefin Sans";
+    font-size: 2.815rem;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.065rem;
+  }
+  .heading-lg {
+    font-family: "Josefin Sans";
+    font-size: 2.15rem;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.065rem;
+  }
+  .heading-md {
+    font-family: "Josefin Sans";
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.05rem;
+  }
+  .heading-sm {
+    font-family: "Josefin Sans";
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0px;
+  }
+  .form-label {
+    font-family: "Josefin Sans";
+    font-size: 1rem;
+    font-weight: light;
+    line-height: 1.6;
+    letter-spacing: 0px;
+  }
+}
+
+.nav {
+  padding: 0.25rem 0;
+}
+
+.nav .nav-links {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .nav .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.header .logo {
+  color: #f0efed;
+  font-size: 1.25rem;
+}
+
+.header-home {
+  background: url("../../images/home-image-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header-home .hero-main {
+  width: 100%;
+  min-height: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-home .hero-main h1 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,26 +1,57 @@
-.heading--xxl {
-  @include text-style($fz: 8.3rem, $fw: 400, $lh: 0.8);
+.heading-xxl {
+  @include text-style($fz: 3rem, $fw: 400, $lh: 0.8);
+  color: white;
 }
 
-.heading--xl {
+.heading-xl {
   @include text-style($fz: 4rem, $fw: bold, $lh: 1.15);
 }
 
-.heading--whatis {
+.heading-whatis {
   @include text-style($fz: 2.815rem, $fw: bold, $ls: 0.065rem);
 }
-.heading--lg {
+
+.heading-lg {
   @include text-style($fz: 2.15rem, $fw: bold, $ls: 0.065rem);
 }
 
-.heading--md {
+.heading-md {
   @include text-style($fz: 1.6rem, $fw: bold, $ls: 0.05rem);
 }
 
-.heading--sm {
+.heading-sm {
   @include text-style($fz: 1rem, $fw: bold);
 }
 
-.form--label {
+.form-label {
   @include text-style($fz: 1rem, $fw: light);
+}
+
+@media (min-width: $tablet) {
+  .heading-xxl {
+    @include text-style($fz: 8.3rem, $fw: 400, $lh: 0.8);
+  }
+
+  .heading-xl {
+    @include text-style($fz: 4rem, $fw: bold, $lh: 1.15);
+  }
+
+  .heading-whatis {
+    @include text-style($fz: 2.815rem, $fw: bold, $ls: 0.065rem);
+  }
+  .heading-lg {
+    @include text-style($fz: 2.15rem, $fw: bold, $ls: 0.065rem);
+  }
+
+  .heading-md {
+    @include text-style($fz: 1.6rem, $fw: bold, $ls: 0.05rem);
+  }
+
+  .heading-sm {
+    @include text-style($fz: 1rem, $fw: bold);
+  }
+
+  .form-label {
+    @include text-style($fz: 1rem, $fw: light);
+  }
 }
