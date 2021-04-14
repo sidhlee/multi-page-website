@@ -18,7 +18,7 @@
     <nav class="nav">
       <a href="#" class="logo">Planted</a>
       <li><a href="/">Home</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="/#about">About</a></li>
       <li><a class="active" href="/blog.html">Blog</a></li>
       <li><a href="/contact.html">Contact</a></li>
     </nav>
@@ -27,7 +27,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="blog-main">
     <section class="blog">
       <div class="blog-img shadow-left">
         <img src="../images/post-image.jpg" alt="">
@@ -83,14 +83,14 @@
         </ul>
       </div>
 
-      <form action="" class="blog-form">
-        <fieldset class="form-user">
+      <form action="" class="form">
+        <fieldset class="form-inputs">
           <label for="name" class="sr-only">Name</label>
           <input type="text" name="name" id="name" placeholder="Name" aria-label="Name">
           <label for="email" class="sr-only">Email address</label>
           <input type="email" name="email" id="email" placeholder="Email address" aria-label="Email address">
         </fieldset>
-        <textarea name="form-comment" cols="30" rows="10" placeholder="Comment"></textarea>
+        <textarea class="form-textarea" name="form-comment" cols="30" rows="10" placeholder="Comment"></textarea>
         <button type="submit">Post Comment</button>
       </form>
     </section>
