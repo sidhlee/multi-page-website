@@ -1,0 +1,75 @@
+/* =========================
+ *  Variables
+ * ======================== */
+
+// Breakpoints
+$tablet: 700px;
+$desktop: 1200px;
+$wide: 2000px;
+
+// colors
+$clr-primary: #0e902d;
+$clr-accent: #f8e71c;
+$text-main: #2c2c2c;
+$text-secondary: #074115;
+$text-inverse: #f0efed;
+
+// font
+$ff-body: Roboto;
+$ff-heading: 'Josefin Sans';
+
+/* =========================
+ *  Mixins
+ * ======================== */
+@mixin text-style(
+	$ff: $ff-heading,
+	$fz: 1rem,
+	$fw: regular,
+	$lh: 1.6,
+	$ls: 0px,
+	$color: $text-main
+) {
+	font-family: $ff;
+	font-size: $fz;
+	font-weight: $fw;
+	line-height: $lh;
+	letter-spacing: $ls;
+}
+
+/* =========================
+ *  Utils
+ * ======================== */
+
+.sr-only:not(:focus):not(:active) {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(00 0 0);
+	overflow: hidden;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: '';
+	clear: both;
+	height: 0;
+}
+
+.accent {
+	color: $clr-accent;
+}
+
+.container {
+	width: 100%;
+	max-width: $desktop;
+	margin: 0 auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}

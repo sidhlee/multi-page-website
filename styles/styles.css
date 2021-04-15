@@ -1,3 +1,12 @@
+/* =========================
+ *  Variables
+ * ======================== */
+/* =========================
+ *  Mixins
+ * ======================== */
+/* =========================
+ *  Utils
+ * ======================== */
 .sr-only:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -37,7 +46,13 @@ html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-size: 125%;
+  font-size: 112.5%;
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 125%;
+  }
 }
 
 body {
@@ -175,11 +190,10 @@ textarea {
 
 .heading-xxl {
   font-family: "Josefin Sans";
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 400;
   line-height: 0.8;
   letter-spacing: 0px;
-  color: white;
 }
 
 .heading-xl {
@@ -282,6 +296,9 @@ textarea {
   }
 }
 
+/* =========================
+ *  Navigation
+ * ======================== */
 .nav {
   padding: 0.25rem 0;
 }
@@ -298,6 +315,9 @@ textarea {
   }
 }
 
+/* =========================
+ *  Header
+ * ======================== */
 .header .logo {
   color: #f0efed;
   font-size: 1.25rem;
@@ -328,4 +348,7 @@ textarea {
   width: -moz-min-content;
   width: min-content;
 }
-/*# sourceMappingURL=styles.css.map */
+
+/* =========================
+ *  Footer
+ * ======================== */
