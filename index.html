@@ -10,20 +10,39 @@
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Roboto&display=swap"
 		rel="stylesheet" />
 	<link rel="stylesheet" href="./styles/styles.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+		integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+		crossorigin="anonymous" />
 </head>
 
 <body>
+	<label class="menu-btn" for="menu-toggler"><span></span></label>
+	<input class="menu-toggler sr-only" type="checkbox" id="menu-toggler">
+	<label class="menu-modal" for="menu-toggler">
+		<nav class="nav nav-modal">
+			<ul class="nav-links">
+				<li><a class="active" href="/">Home</a></li>
+				<li><a href="/#about">About</a></li>
+				<li><a href="/blog.html">Blog</a></li>
+				<li><a href="/contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</label>
+
+
 	<header class="header header-home">
-		<nav class="nav">
-			<div class="container">
-				<a href="#" class="logo">Planted</a>
-				<ul class="nav-links">
-					<li><a class="active" href="/">Home</a></li>
-					<li><a href="/#about">About</a></li>
-					<li><a href="/blog.html">Blog</a></li>
-					<li><a href="/contact.html">Contact</a></li>
-				</ul>
-			</div>
+
+		<nav class="nav navbar">
+
+			<a href="#" class="logo">Planted</a>
+			<ul class="nav-links">
+				<li><a class="active" href="/">Home</a></li>
+				<li><a href="/#about">About</a></li>
+				<li><a href="/blog.html">Blog</a></li>
+				<li><a href="/contact.html">Contact</a></li>
+			</ul>
+
+
 		</nav>
 		<div class="hero hero-main">
 			<h1 class="heading-xxl">
@@ -33,9 +52,9 @@
 	</header>
 
 	<main>
-		<section id="about" class="about">
+		<section id="about" class="about center">
 			<div class="container bg-secondary">
-				<h2 class="heading-whatis">What is Planted?</h2>
+				<h2 class="heading-whatis ">What is Planted?</h2>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Vero, facere porro illum quia minima enim repudiandae
@@ -51,7 +70,7 @@
 
 		<section class="events">
 			<div class="card">
-				<div class="card-img shadow-right">
+				<div class="card-img shadow">
 					<img src="./images/left-flowers.jpg" alt="" />
 				</div>
 				<div class="card-body align-right">
@@ -67,11 +86,11 @@
 				</div>
 			</div>
 			<div class="card">
-				<div class="card-img shadow-left">
+				<div class="card-img shadow shadow-left">
 					<img src="./images/right-flowers.jpg" alt="" />
 				</div>
 				<div class="card-body">
-					<h2>Unique plants to discover</h2>
+					<h2>Upcoming workshops</h2>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing
 						elit. Architecto incidunt maiores error praesentium,
@@ -86,9 +105,9 @@
 
 		<section class="features bg-secondary">
 			<div class="container">
-				<div class="feature">
+				<div class="feature-item">
 					<div class="feature-heading">
-						<span class="feature-icon"><i class="fa"></i></span>
+						<span class="feature-icon"><i class="fas fa-leaf"></i></span>
 						<h2>Green houses</h2>
 					</div>
 					<p>
@@ -99,9 +118,9 @@
 						necessitatibus omnis nulla!
 					</p>
 				</div>
-				<div class="feature">
+				<div class="feature-item">
 					<div class="feature-heading">
-						<span class="feature-icon"><i class="fa"></i></span>
+						<span class="feature-icon"><i class="fas fa-users"></i></span>
 						<h2>Community</h2>
 					</div>
 					<p>
@@ -112,9 +131,9 @@
 						necessitatibus omnis nulla!
 					</p>
 				</div>
-				<div class="feature">
+				<div class="feature-item">
 					<div class="feature-heading">
-						<span class="feature-icon"><i class="fa"></i></span>
+						<span class="feature-icon"><i class="fas fa-file"></i></span>
 						<h2>Blog</h2>
 					</div>
 					<p>
@@ -125,9 +144,9 @@
 						necessitatibus omnis nulla!
 					</p>
 				</div>
-				<div class="feature">
+				<div class="feature-item">
 					<div class="feature-heading">
-						<span class="feature-icon"><i class="fa"></i></span>
+						<span class="feature-icon"><i class="fas fa-phone"></i></span>
 						<h2>Get in Touch</h2>
 					</div>
 					<p>
@@ -143,10 +162,10 @@
 
 		<section class="founder">
 			<div class="container">
-				<div class="founder-image">
+				<div class="founder-img shadow">
 					<img src="./images/founder.jpg" alt="" />
 				</div>
-				<div class="founder-body">
+				<div class="card-body">
 					<h2>Planted's founder</h2>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing
@@ -164,16 +183,14 @@
 		</section>
 
 		<section class="gallery">
-			<div class="container">
-				<div class="gallery-img">
-					<img src="./images/gallery-image-1.jpg" alt="" />
-				</div>
-				<div class="gallery-img">
-					<img src="./images/gallery-image-2.jpg" alt="" />
-				</div>
-				<div class="gallery-img">
-					<img src="./images/gallery-image-3.jpg" alt="" />
-				</div>
+			<div class="gallery-img">
+				<img src="./images/gallery-image-1.jpg" alt="" />
+			</div>
+			<div class="gallery-img">
+				<img src="./images/gallery-image-2.jpg" alt="" />
+			</div>
+			<div class="gallery-img">
+				<img src="./images/gallery-image-3.jpg" alt="" />
 			</div>
 		</section>
 	</main>

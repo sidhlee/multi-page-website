@@ -1,0 +1,143 @@
+/* =========================
+ *  Navigation
+ * ======================== */
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.5rem 1em;
+	text-align: center;
+	.nav-links {
+		display: none;
+		font-family: $ff-heading;
+		text-transform: uppercase;
+		a {
+			color: $text-main;
+		}
+		@media (min-width: $tablet) {
+			display: flex;
+		}
+	}
+	// on mobile view
+	&.nav-modal {
+		.nav-links {
+			display: flex;
+			flex-direction: column;
+			li {
+				a {
+					display: inline-block;
+					padding: 1em;
+					font-size: 1.5rem;
+				}
+			}
+			@media (min-width: $tablet) {
+				display: none;
+			}
+		}
+	}
+}
+
+.nav.navbar {
+	flex-direction: row;
+	padding-left: $px;
+
+	.nav-links {
+		width: auto;
+		a {
+			color: $text-inverse;
+		}
+	}
+}
+
+/* =========================
+ *  Header
+ * ======================== */
+.header {
+	.logo {
+		color: $text-inverse;
+		font-size: 1.25rem;
+	}
+}
+
+.header-home {
+	background: url('../../images/home-image-1.jpg');
+	background-size: cover;
+	background-position: center;
+
+	.hero-main {
+		width: 100%;
+		min-height: 15rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h1 {
+			text-align: center;
+			width: min-content;
+		}
+	}
+}
+
+/* =========================
+ *  Main
+ * ======================== */
+
+.about {
+	padding: 4rem 0;
+	background-color: $bg-secondary;
+}
+
+.features {
+	background: $bg-secondary;
+	padding: 4em 0;
+}
+
+.founder {
+	&::before {
+		content: '';
+		display: block;
+		height: 100vw;
+		max-height: 500px;
+		background-image: url('../../images/banner-image.jpg');
+		background-position: 18%;
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: $bg-secondary;
+		// place container "behind" the image shadow
+		position: relative;
+		z-index: -100;
+		padding-bottom: 3rem;
+		.founder-img {
+			$size: 15rem;
+			width: $size;
+			height: $size;
+			margin-top: 2rem;
+		}
+	}
+}
+
+.gallery {
+	padding: 3rem 0;
+	display: flex;
+	width: 100%;
+	overflow-x: hidden;
+	.gallery-img {
+		// don't shrink and just overflow
+		flex: 1 0 200px;
+		margin-right: 1rem;
+	}
+}
+
+/* =========================
+ *  Footer
+ * ======================== */
+
+.footer {
+	padding: 0.25em 0;
+	background: $text-main;
+	color: $text-inverse;
+	text-align: center;
+}

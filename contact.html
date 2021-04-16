@@ -6,16 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Roboto&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css">
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
     integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
     crossorigin="anonymous" />
 </head>
 
 <body>
+  <label class="menu-btn" for="menu-toggler"><span></span></label>
+  <input class="menu-toggler sr-only" type="checkbox" id="menu-toggler">
+  <label class="menu-modal" for="menu-toggler">
+    <nav class="nav nav-modal">
+      <ul class="nav-links">
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </label>
 
   <header class="header header-home">
     <nav class="nav">
@@ -30,7 +42,7 @@
     </div>
   </header>
   <main class="contact-main">
-    <form action="" class="form shadow-left">
+    <form action="" class="form shadow shadow-left">
       <fieldset class="form-inputs">
         <label for="name" class="sr-only">Name</label>
         <input type="text" name="name" id="name" placeholder="Name" aria-label="Name">
