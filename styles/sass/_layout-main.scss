@@ -39,8 +39,10 @@
 }
 
 .nav.navbar {
-	flex-direction: row;
-	padding-left: $px;
+	.container {
+		display: flex;
+		align-items: center;
+	}
 
 	.nav-links {
 		width: auto;

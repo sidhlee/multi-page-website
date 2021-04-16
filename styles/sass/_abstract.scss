@@ -5,7 +5,7 @@
 // Breakpoints
 $tablet: 600px;
 $desktop: 1000px;
-$wide: 2000px;
+$mw: 1400px;
 
 // colors
 $clr-primary: #0e902d;
@@ -19,7 +19,9 @@ $bg-secondary: #f0efed;
 $ff-body: Roboto;
 $ff-heading: 'Josefin Sans';
 
-$px: 1em;
+// outer gutter width
+$px: Min(Max(1rem, 5vw), 3rem);
+// section top/bottom padding
 $py: 2em;
 
 $z-menu-btn: 1000;
@@ -76,10 +78,10 @@ $z-menu-modal: 500;
 
 .container {
 	width: 100%;
-	max-width: $desktop;
+	max-width: $mw;
 	margin: 0 auto;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: $px;
+	padding-right: $px;
 }
 
 .center {

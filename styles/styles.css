@@ -36,10 +36,10 @@
 
 .container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: Min(Max(1rem, 5vw), 3rem);
+  padding-right: Min(Max(1rem, 5vw), 3rem);
 }
 
 .center {
@@ -415,12 +415,13 @@ p {
   }
 }
 
-.nav.navbar {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding-left: 1em;
+.nav.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav.navbar .nav-links {
@@ -646,7 +647,7 @@ p {
 }
 
 .card-body {
-  padding: 2em 1em;
+  padding: 2em Min(Max(1rem, 5vw), 3rem);
   text-align: center;
 }
 
