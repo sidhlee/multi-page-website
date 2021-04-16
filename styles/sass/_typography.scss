@@ -13,7 +13,7 @@ p {
 }
 
 .heading-xl {
-	@include text-style($fz: 4rem, $fw: bold, $lh: 1.15);
+	@include text-style($fz: 3rem, $fw: bold, $lh: 1.15, $color: $clr-accent);
 }
 
 .heading-whatis {

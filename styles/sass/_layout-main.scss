@@ -69,7 +69,7 @@
 
 	.hero-main {
 		width: 100%;
-		min-height: 15rem;
+		min-height: $hero-main-height;
 		display: flex;
 		justify-content: center;
 		align-items: center;

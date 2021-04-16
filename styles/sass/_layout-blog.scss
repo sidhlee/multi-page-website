@@ -1,0 +1,10 @@
+.header-blog {
+	.navbar {
+		background: $clr-navbar;
+	}
+	.hero {
+		height: $hero-height;
+		background-image: url('../../images/blog-header-1.jpg');
+		background-size: cover;
+	}
+}

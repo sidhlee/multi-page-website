@@ -15,6 +15,8 @@ $text-secondary: #074115;
 $text-inverse: #f0efed;
 $bg-secondary: #f0efed;
 
+$clr-navbar: #222;
+
 // font
 $ff-body: Roboto;
 $ff-heading: 'Josefin Sans';
@@ -23,6 +25,9 @@ $ff-heading: 'Josefin Sans';
 $px: Min(Max(1rem, 5vw), 3rem);
 // section top/bottom padding
 $py: 2em;
+
+$hero-height: 15rem;
+$hero-main-height: 15rem;
 
 $z-menu-btn: 1000;
 $z-menu-modal: 500;
