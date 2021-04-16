@@ -519,6 +519,9 @@ p {
 
 .gallery {
   padding: 3rem 0;
+}
+
+.gallery ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -526,7 +529,7 @@ p {
   overflow-x: hidden;
 }
 
-.gallery .gallery-img {
+.gallery ul .gallery-item {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 200px;
           flex: 1 0 200px;

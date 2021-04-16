@@ -123,13 +123,15 @@
 
 .gallery {
 	padding: 3rem 0;
-	display: flex;
-	width: 100%;
-	overflow-x: hidden;
-	.gallery-img {
-		// don't shrink and just overflow
-		flex: 1 0 200px;
-		margin-right: 1rem;
+	ul {
+		display: flex;
+		width: 100%;
+		overflow-x: hidden;
+		.gallery-item {
+			// don't shrink and just overflow
+			flex: 1 0 200px;
+			margin-right: 1rem;
+		}
 	}
 }
 
