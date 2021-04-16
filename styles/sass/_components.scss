@@ -108,3 +108,10 @@
 		}
 	}
 }
+
+.blog-comment {
+	display: flex;
+	.comment-user-img {
+		width: 4rem;
+	}
+}

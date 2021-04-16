@@ -21,7 +21,7 @@ p {
 }
 
 .heading-lg {
-	@include text-style($fz: 2.15rem, $fw: bold, $ls: 0.065rem);
+	@include text-style($fz: 1.8rem, $fw: bold, $ls: 0.065rem);
 }
 
 .heading-md {

@@ -1,7 +1,9 @@
 {
 	"liveSassCompile.settings.formats": [
 		{
+			// expanded(default) | compacct | compresssed | nested
 			"format": "expanded",
+			// .css | .min.css
 			"extensionName": ".css",
 			"savePath": "/styles"
 		}
@@ -11,6 +13,7 @@
 		".vscode/**"
 	],
 	"liveSassCompile.settings.generateMap": false,
+	// browserlist query: support browsers with >1% global usage + last 2 versions of each browser
 	"liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
 	"editor.tabSize": 4,
 	"prettier.tabWidth": 4,

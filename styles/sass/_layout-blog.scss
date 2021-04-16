@@ -8,3 +8,18 @@
 		background-size: cover;
 	}
 }
+
+.blog {
+	.blog-img {
+		transform: translate(2.5%, -5%);
+	}
+	.blog-header {
+		margin: 2em 0;
+		text-align: left;
+		.blog-meta {
+			margin-top: 0;
+			font-style: italic;
+			color: $text-secondary;
+		}
+	}
+}
