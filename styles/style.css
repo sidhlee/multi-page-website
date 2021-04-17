@@ -869,6 +869,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin: 0 auto;
   overflow-x: hidden;
 }
 
@@ -876,6 +877,9 @@ img {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 200px;
           flex: 1 0 200px;
+}
+
+.gallery ul .gallery-item:not(:last-of-type) {
   margin-right: 1rem;
 }
 

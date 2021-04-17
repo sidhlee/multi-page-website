@@ -161,11 +161,14 @@
 	ul {
 		display: flex;
 		width: 100%;
+		margin: 0 auto;
 		overflow-x: hidden;
 		.gallery-item {
 			// don't shrink and just overflow
 			flex: 1 0 200px;
-			margin-right: 1rem;
+			&:not(:last-of-type) {
+				margin-right: 1rem;
+			}
 		}
 	}
 }
