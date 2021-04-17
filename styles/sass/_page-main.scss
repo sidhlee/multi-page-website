@@ -14,8 +14,13 @@
 .events {
 	display: flex;
 	flex-direction: column;
-	// remove padding set in container class
+	align-items: center;
+	// remove horizontal padding set in container class
 	padding: 0;
+	overflow-x: hidden;
+	.card {
+		margin-bottom: 2em;
+	}
 
 	// make shadow shorter than image
 	.card-img::after {
@@ -25,10 +30,15 @@
 	}
 
 	@media (min-width: $desktop) {
+		// let card image overflow over other sections
+		overflow-x: initial;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: flex-start;
+
 		.card {
 			max-width: 32rem;
+			margin-bottom: 0;
 		}
 
 		--img-offset: 2rem;

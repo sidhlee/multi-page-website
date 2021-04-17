@@ -697,7 +697,15 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0;
+  overflow-x: hidden;
+}
+
+.events .card {
+  margin-bottom: 2em;
 }
 
 .events .card-img::after {
@@ -707,6 +715,7 @@ img {
 
 @media (min-width: 900px) {
   .events {
+    overflow-x: initial;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -714,10 +723,14 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     --img-offset: 2rem;
   }
   .events .card {
     max-width: 32rem;
+    margin-bottom: 0;
   }
   .events .card:first-of-type {
     padding-right: 1em;
