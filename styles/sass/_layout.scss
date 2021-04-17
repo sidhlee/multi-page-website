@@ -12,11 +12,14 @@
 		display: none;
 		font-family: var(--ff-heading);
 		text-transform: uppercase;
-		a {
-			color: var(--text-main);
-		}
+		letter-spacing: 0.1rem;
+
 		@media (min-width: $desktop) {
 			display: flex;
+			width: 20rem;
+			li {
+				margin-left: 2.25rem;
+			}
 		}
 	}
 	// on mobile view
@@ -38,17 +41,22 @@
 	}
 }
 
+.logo {
+	color: var(--text-inverse);
+	font-size: Min(Max(1.5rem, 5vw), 2.5rem);
+	font-family: var(--ff-heading);
+	line-height: 1;
+}
+
 .nav.navbar {
+	padding-top: 1.5rem;
 	.container {
 		display: flex;
 		align-items: center;
 	}
 
 	.nav-links {
-		width: auto;
-		a {
-			color: var(--text-inverse);
-		}
+		font-size: 1rem;
 	}
 }
 
@@ -59,12 +67,6 @@
 /* =========================
  *  Header
  * ======================== */
-.header {
-	.logo {
-		color: var(--text-inverse);
-		font-size: 1.25rem;
-	}
-}
 
 .hero {
 	height: var(--hero-height);

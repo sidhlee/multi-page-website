@@ -21,7 +21,7 @@
 	@media (min-width: $desktop) {
 		position: relative;
 		&::before {
-			--size: Min(Max(20rem, calc(6rem + 33vw)), 50rem);
+			--size: Min(Max(20rem, calc(6rem + 33vw)), 30rem);
 
 			content: '';
 			position: absolute;

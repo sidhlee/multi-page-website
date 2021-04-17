@@ -28,7 +28,7 @@ $mw: 1600px;
 	// vertical padding inside container
 	--py: Min(Max(3rem, 10vw), 5rem);
 	--hero-height: Min(Max(15rem, 31vw), 20rem);
-	--hero-main-height: Min(Max(15rem, 45vw), 30rem);
+	--hero-main-height: Min(Max(15rem, 45vw), 40rem);
 	--form-border: 1px solid var(--clr-primary);
 
 	--z-menu-btn: 1000;
@@ -83,6 +83,10 @@ $mw: 1600px;
 }
 
 .accent {
+	color: var(--clr-accent);
+}
+
+.active {
 	color: var(--clr-accent);
 }
 
