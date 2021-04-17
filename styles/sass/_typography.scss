@@ -41,7 +41,7 @@ p {
 	@include text-style($fz: 1rem, $fw: light);
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $desktop) {
 	.heading-xxl {
 		@include text-style(
 			$fz: Min(Max(5rem, 14vw), 8.3rem),

@@ -72,20 +72,24 @@
 
 .card {
 	width: 100%;
+	// don't grow wider than image width!
+	max-width: 670px;
+	margin: 0 auto;
 	// caused by shadow
-	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
 	.card-img {
-		width: 100%;
-		transform: translate(-2.5%, -2.5%);
-	}
-
-	@media (min-width: $tablet) {
-		width: 50%;
+		&.shadow {
+			transform: translate(calc(-1 * var(--px)), -1rem);
+		}
+		&.shadow-left {
+			transform: translate(calc(1 * var(--px)), -1rem);
+		}
 	}
 }
 
 .card-body {
-	padding: $py $px;
+	padding: var(--py) 0;
 	text-align: center;
 }
 

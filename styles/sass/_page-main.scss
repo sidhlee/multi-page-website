@@ -1,6 +1,35 @@
 .about {
 	padding: 4rem 0;
 	background-color: $bg-secondary;
+	p {
+		max-width: 55rem;
+	}
+}
+
+.events {
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width: $desktop) {
+		flex-direction: row;
+
+		.card:first-of-type {
+			margin: 0 auto 0 var(--px);
+			.card-body {
+				text-align: right;
+			}
+		}
+
+		.card:last-of-type {
+			margin: 0 var(--px) 0 auto;
+			.card-img {
+				order: 2;
+			}
+			.card-body {
+				text-align: left;
+			}
+		}
+	}
 }
 
 .features {
