@@ -40,7 +40,6 @@
 	min-height: var(--hero-main-height);
 	// give little more attention than other sections by adding more vertical space
 	padding: calc(var(--py) * 1.5) 0;
-	background-color: var(--bg-secondary);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -50,12 +49,14 @@
 }
 
 .events {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	// remove horizontal padding set in container class
-	padding: 0;
 	overflow-x: hidden;
+	.container-events {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		// remove horizontal padding set in container class
+		padding: 0;
+	}
 	.card {
 		margin-bottom: 2em;
 	}
@@ -70,9 +71,11 @@
 	@media (min-width: $desktop) {
 		// let card image overflow over other sections
 		overflow-x: initial;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: flex-start;
+		.container-events {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
 
 		.card {
 			max-width: 32rem;
@@ -115,7 +118,7 @@
 }
 
 .features {
-	background: var(--bg-secondary);
+	background: var(--bg-primary);
 	padding: var(--py) 0;
 	.container-feature {
 		display: flex;
@@ -155,7 +158,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		background: var(--bg-secondary);
+		background: var(--bg-primary);
 		// place container "behind" the image shadow
 		position: relative;
 		z-index: -100;

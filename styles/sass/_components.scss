@@ -73,6 +73,7 @@
 }
 
 .card {
+	position: relative;
 	width: 100%;
 	// don't grow wider than image width!
 	max-width: 670px;
@@ -80,6 +81,10 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.card-img {
+	margin-bottom: 2rem;
 }
 
 .card-body {
@@ -122,10 +127,15 @@
 	}
 	input,
 	textarea {
-		padding: 2em 1em 0.5em;
+		display: block;
+		width: 100%;
+		padding: 1em 1.5em;
 		font-family: var(--ff-heading);
 		font-size: 1rem;
 		font-weight: 400;
+	}
+	textarea {
+		padding: 2em 1.5em;
 	}
 }
 

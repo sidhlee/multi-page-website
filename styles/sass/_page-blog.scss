@@ -6,7 +6,7 @@
 
 .blog {
 	margin-bottom: 2rem;
-	background: var(--bg-secondary);
+	background: var(--bg-primary);
 	.blog-img {
 		transform: translate(2.5%, -5%);
 	}
@@ -34,7 +34,7 @@
 
 	input,
 	textarea {
-		background: var(--bg-secondary);
+		background: var(--bg-primary);
 	}
 }
 
@@ -64,7 +64,9 @@
 }
 
 .blog-info {
-	padding: 3rem 0;
+	padding: 2em var(--px-xs);
+	margin-bottom: 2rem;
+
 	h2 {
 		line-height: 1;
 	}
