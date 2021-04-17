@@ -79,6 +79,138 @@
           transform: translate(-1rem, 1rem);
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 1em 0 0;
+}
+
+.heading-xxl {
+  font-family: "Josefin Sans";
+  font-size: Min(Max(3.5rem, 15vw), 5rem);
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: 0px;
+  color: #f0efed;
+}
+
+.heading-xl {
+  font-family: "Josefin Sans";
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.15;
+  letter-spacing: 0px;
+  color: #f8e71c;
+}
+
+.heading-whatis {
+  font-family: "Josefin Sans";
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: 0.065rem;
+  color: #2c2c2c;
+}
+
+.heading-lg {
+  font-family: "Josefin Sans";
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0.065rem;
+  color: #2c2c2c;
+}
+
+.heading-md {
+  font-family: "Josefin Sans";
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+  color: #2c2c2c;
+}
+
+.heading-sm {
+  font-family: "Josefin Sans";
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 0px;
+  color: #074115;
+}
+
+.form-label {
+  font-family: "Josefin Sans";
+  font-size: 1rem;
+  font-weight: light;
+  line-height: 1.6;
+  letter-spacing: 0px;
+  color: #2c2c2c;
+}
+
+@media (min-width: 600px) {
+  .heading-xxl {
+    font-family: "Josefin Sans";
+    font-size: Min(Max(5rem, 14vw), 8.3rem);
+    font-weight: 400;
+    line-height: 0.8;
+    letter-spacing: 0px;
+    color: #f0efed;
+  }
+  .heading-xl {
+    font-family: "Josefin Sans";
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.15;
+    letter-spacing: 0px;
+    color: #2c2c2c;
+  }
+  .heading-whatis {
+    font-family: "Josefin Sans";
+    font-size: 2.815rem;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.065rem;
+    color: #2c2c2c;
+  }
+  .heading-lg {
+    font-family: "Josefin Sans";
+    font-size: 2.15rem;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.065rem;
+    color: #2c2c2c;
+  }
+  .heading-md {
+    font-family: "Josefin Sans";
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.05rem;
+    color: #2c2c2c;
+  }
+  .heading-sm {
+    font-family: "Josefin Sans";
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0px;
+    color: #2c2c2c;
+  }
+  .form-label {
+    font-family: "Josefin Sans";
+    font-size: 1rem;
+    font-weight: light;
+    line-height: 1.6;
+    letter-spacing: 0px;
+    color: #2c2c2c;
+  }
+}
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -248,138 +380,6 @@ img {
      object-fit: cover;
 }
 
-h1,
-h2,
-h3 {
-  margin: 0;
-}
-
-p {
-  margin: 1em 0 0;
-}
-
-.heading-xxl {
-  font-family: "Josefin Sans";
-  font-size: Min(Max(3.5rem, 15vw), 5rem);
-  font-weight: 400;
-  line-height: 0.8;
-  letter-spacing: 0px;
-  color: #f0efed;
-}
-
-.heading-xl {
-  font-family: "Josefin Sans";
-  font-size: 3rem;
-  font-weight: bold;
-  line-height: 1.15;
-  letter-spacing: 0px;
-  color: #f8e71c;
-}
-
-.heading-whatis {
-  font-family: "Josefin Sans";
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.4;
-  letter-spacing: 0.065rem;
-  color: #2c2c2c;
-}
-
-.heading-lg {
-  font-family: "Josefin Sans";
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 1.6;
-  letter-spacing: 0.065rem;
-  color: #2c2c2c;
-}
-
-.heading-md {
-  font-family: "Josefin Sans";
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 1.6;
-  letter-spacing: 0.05rem;
-  color: #2c2c2c;
-}
-
-.heading-sm {
-  font-family: "Josefin Sans";
-  font-size: 1rem;
-  font-weight: bold;
-  line-height: 1.6;
-  letter-spacing: 0px;
-  color: #074115;
-}
-
-.form-label {
-  font-family: "Josefin Sans";
-  font-size: 1rem;
-  font-weight: light;
-  line-height: 1.6;
-  letter-spacing: 0px;
-  color: #2c2c2c;
-}
-
-@media (min-width: 600px) {
-  .heading-xxl {
-    font-family: "Josefin Sans";
-    font-size: Min(Max(5rem, 14vw), 8.3rem);
-    font-weight: 400;
-    line-height: 0.8;
-    letter-spacing: 0px;
-    color: #f0efed;
-  }
-  .heading-xl {
-    font-family: "Josefin Sans";
-    font-size: 4rem;
-    font-weight: bold;
-    line-height: 1.15;
-    letter-spacing: 0px;
-    color: #2c2c2c;
-  }
-  .heading-whatis {
-    font-family: "Josefin Sans";
-    font-size: 2.815rem;
-    font-weight: bold;
-    line-height: 1.6;
-    letter-spacing: 0.065rem;
-    color: #2c2c2c;
-  }
-  .heading-lg {
-    font-family: "Josefin Sans";
-    font-size: 2.15rem;
-    font-weight: bold;
-    line-height: 1.6;
-    letter-spacing: 0.065rem;
-    color: #2c2c2c;
-  }
-  .heading-md {
-    font-family: "Josefin Sans";
-    font-size: 1.6rem;
-    font-weight: bold;
-    line-height: 1.6;
-    letter-spacing: 0.05rem;
-    color: #2c2c2c;
-  }
-  .heading-sm {
-    font-family: "Josefin Sans";
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 1.6;
-    letter-spacing: 0px;
-    color: #2c2c2c;
-  }
-  .form-label {
-    font-family: "Josefin Sans";
-    font-size: 1rem;
-    font-weight: light;
-    line-height: 1.6;
-    letter-spacing: 0px;
-    color: #2c2c2c;
-  }
-}
-
 .menu-btn {
   position: fixed;
   top: 0.5em;
@@ -462,22 +462,6 @@ p {
   transition: all 200ms ease;
   -webkit-transform: translateY(-20%);
           transform: translateY(-20%);
-}
-
-.navbar.navbar-bg {
-  background: #141414;
-}
-
-.hero {
-  height: Min(Max(70vw, 15rem), 30rem);
-  padding: 4rem;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 .btn {
@@ -680,6 +664,10 @@ p {
   color: #f0efed;
 }
 
+.navbar.navbar-bg {
+  background: #141414;
+}
+
 /* =========================
  *  Header
  * ======================== */
@@ -716,9 +704,31 @@ p {
   left: 5%;
 }
 
+.hero {
+  height: Min(Max(70vw, 15rem), 30rem);
+  padding: 4rem;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 /* =========================
  *  Main
  * ======================== */
+/* =========================
+ *  Footer
+ * ======================== */
+.footer {
+  padding: 0.25em 0;
+  background: #2c2c2c;
+  color: #f0efed;
+  text-align: center;
+}
+
 .about {
   padding: 4rem 0;
   background-color: #f0efed;
@@ -778,16 +788,6 @@ p {
       -ms-flex: 1 0 200px;
           flex: 1 0 200px;
   margin-right: 1rem;
-}
-
-/* =========================
- *  Footer
- * ======================== */
-.footer {
-  padding: 0.25em 0;
-  background: #2c2c2c;
-  color: #f0efed;
-  text-align: center;
 }
 
 .header-blog .hero {

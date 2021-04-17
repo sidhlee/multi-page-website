@@ -1,0 +1,50 @@
+.about {
+	padding: 4rem 0;
+	background-color: $bg-secondary;
+}
+
+.features {
+	background: $bg-secondary;
+	padding: 4em 0;
+}
+
+.founder {
+	&::before {
+		content: '';
+		display: block;
+		height: 100vw;
+		max-height: 500px;
+		background-image: url('../../images/banner-image.jpg');
+		background-position: 18%;
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: $bg-secondary;
+		// place container "behind" the image shadow
+		position: relative;
+		z-index: -100;
+		padding-bottom: 3rem;
+		.founder-img {
+			$size: 15rem;
+			width: $size;
+			height: $size;
+			margin-top: 2rem;
+		}
+	}
+}
+
+.gallery {
+	padding: 3rem 0;
+	ul {
+		display: flex;
+		width: 100%;
+		overflow-x: hidden;
+		.gallery-item {
+			// don't shrink and just overflow
+			flex: 1 0 200px;
+			margin-right: 1rem;
+		}
+	}
+}
