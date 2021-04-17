@@ -35,6 +35,9 @@
 
 		box-shadow: 1px 1px 0 1.5px rgba(0, 0, 0, 1);
 	}
+	@media (min-width: $desktop) {
+		display: none;
+	}
 }
 
 .menu-toggler:checked + .menu-modal {

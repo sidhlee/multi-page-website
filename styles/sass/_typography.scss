@@ -9,7 +9,12 @@ p {
 }
 
 .heading-xxl {
-	@include text-style($fz: 3.5rem, $fw: 400, $lh: 0.8, $color: $text-inverse);
+	@include text-style(
+		$fz: Min(Max(3.5rem, 15vw), 5rem),
+		$fw: 400,
+		$lh: 0.8,
+		$color: $text-inverse
+	);
 }
 
 .heading-xl {
@@ -39,7 +44,7 @@ p {
 @media (min-width: $tablet) {
 	.heading-xxl {
 		@include text-style(
-			$fz: 8.3rem,
+			$fz: Min(Max(5rem, 14vw), 8.3rem),
 			$fw: 400,
 			$lh: 0.8,
 			$color: $text-inverse

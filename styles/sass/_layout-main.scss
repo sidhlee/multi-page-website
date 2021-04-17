@@ -15,7 +15,7 @@
 		a {
 			color: $text-main;
 		}
-		@media (min-width: $tablet) {
+		@media (min-width: $desktop) {
 			display: flex;
 		}
 	}
@@ -74,8 +74,11 @@
 		justify-content: center;
 		align-items: center;
 		h1 {
-			text-align: center;
+			// text-align: center;
 			width: min-content;
+			position: relative;
+			// align h1 centered around "planted"
+			left: 5%;
 		}
 	}
 }

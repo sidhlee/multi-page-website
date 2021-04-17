@@ -3,7 +3,9 @@ html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	// 18px - smaller on mobile (reference: Medium)
+	// font-size: Min(125%, Max(112.5%, 10vw));
 	font-size: 112.5%;
+
 	@media (min-width: $desktop) {
 		// 20px
 		font-size: 125%;
