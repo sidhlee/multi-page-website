@@ -3,7 +3,7 @@
  * ======================== */
 
 // Breakpoints
-$desktop: 800px;
+$desktop: 900px;
 $mw: 1400px;
 
 :root {
@@ -27,8 +27,8 @@ $mw: 1400px;
 	--px: Min(Max(1rem, 5vw), 3rem);
 	// vertical padding inside container
 	--py: 2em;
-	--hero-height: 15rem;
-	--hero-main-height: 15rem;
+	--hero-height: Min(Max(15rem, 31vw), 20rem);
+	--hero-main-height: Min(Max(15rem, 45vw), 30rem);
 	--form-border: 1px solid var(--clr-primary);
 
 	--z-menu-btn: 1000;

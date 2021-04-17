@@ -67,7 +67,9 @@
 	margin-top: 1.5em;
 	background: var(--clr-primary);
 	padding: 0.5em 1.5em;
-	@include text-style($fz: 1rem, $fw: bold, $color: var(--text-inverse));
+	font-size: 1rem;
+	font-weight: bold;
+	color: var(--text-inverse);
 }
 
 .card {
@@ -131,7 +133,9 @@
 	input,
 	textarea {
 		padding: 2em 1em 0.5em;
-		@include text-style();
+		font-family: var(--ff-heading);
+		font-size: 1rem;
+		font-weight: 400;
 	}
 }
 

@@ -19,8 +19,8 @@
   /* Spacing */
   --px: Min(Max(1rem, 5vw), 3rem);
   --py: 2em;
-  --hero-height: 15rem;
-  --hero-main-height: 15rem;
+  --hero-height: Min(Max(15rem, 31vw), 20rem);
+  --hero-main-height: Min(Max(15rem, 45vw), 30rem);
   --form-border: 1px solid var(--clr-primary);
   --z-menu-btn: 1000;
   --z-menu-modal: 500;
@@ -113,6 +113,7 @@ p {
 }
 
 .heading-xxl {
+  font-family: var(--ff-heading);
   font-size: Min(Max(3.5rem, 10vw), 8.3rem);
   font-weight: 400;
   line-height: 0.8;
@@ -120,6 +121,7 @@ p {
 }
 
 .heading-xl {
+  font-family: var(--ff-heading);
   font-size: Min(Max(3rem, 7vw), 4rem);
   font-weight: bold;
   line-height: 1.15;
@@ -127,6 +129,7 @@ p {
 }
 
 .heading-whatis {
+  font-family: var(--ff-heading);
   font-size: Min(Max(2rem, 6vw), 2.815rem);
   font-weight: bold;
   letter-spacing: 0.065rem;
@@ -134,18 +137,21 @@ p {
 }
 
 .heading-lg {
+  font-family: var(--ff-heading);
   font-size: Min(Max(1.8rem, 7vw), 2.15rem);
   font-weight: bold;
   letter-spacing: 0.065rem;
 }
 
 .heading-md {
+  font-family: var(--ff-heading);
   font-size: Min(Max(1.5rem, 5vw), 1.6rem);
   font-weight: bold;
   letter-spacing: 0.05rem;
 }
 
 .heading-sm {
+  font-family: var(--ff-heading);
   font-size: 1rem;
   font-weight: bold;
   color: var(--text-secondary);
@@ -163,7 +169,7 @@ html {
   font-size: 112.5%;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   html {
     font-size: 125%;
   }
@@ -372,7 +378,7 @@ img {
           box-shadow: 1px 1px 0 1.5px black;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   .menu-btn {
     display: none;
   }
@@ -414,11 +420,8 @@ img {
   margin-top: 1.5em;
   background: var(--clr-primary);
   padding: 0.5em 1.5em;
-  font-family: var(--ff-heading);
   font-size: 1rem;
   font-weight: bold;
-  line-height: 1.6;
-  letter-spacing: 0px;
   color: var(--text-inverse);
 }
 
@@ -516,10 +519,7 @@ img {
   padding: 2em 1em 0.5em;
   font-family: var(--ff-heading);
   font-size: 1rem;
-  font-weight: regular;
-  line-height: 1.6;
-  letter-spacing: 0px;
-  color: var(--text-main);
+  font-weight: 400;
 }
 
 .find-more {
@@ -568,7 +568,7 @@ img {
   color: var(--text-main);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   .nav .nav-links {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -592,7 +592,7 @@ img {
   font-size: 1.5rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   .nav.nav-modal .nav-links {
     display: none;
   }
@@ -699,7 +699,7 @@ img {
           flex-direction: column;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   .events {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -910,12 +910,6 @@ img {
 .contact-email {
   display: inline-block;
   margin-top: 1em;
-  font-family: var(--ff-heading);
-  font-size: 1.2rem;
-  font-weight: bold;
-  line-height: 1.6;
-  letter-spacing: 0px;
-  color: var(--text-main);
 }
 
 .address p {
