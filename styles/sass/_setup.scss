@@ -79,6 +79,15 @@ input {
 	overflow: visible;
 }
 
+input {
+	border: 0;
+	border-bottom: $form-border;
+}
+
+textarea {
+	border: $form-border;
+}
+
 button,
 select {
 	text-transform: none;
@@ -107,8 +116,10 @@ button:-moz-focusring,
 }
 
 fieldset {
-	padding: 0.35em 0.75em 0.625em;
+	padding: 0;
+	border: 0;
 }
+
 legend {
 	box-sizing: border-box;
 	color: inherit;

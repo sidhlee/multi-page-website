@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* =========================
  *  Variables
  * ======================== */
@@ -159,6 +160,15 @@ input {
   overflow: visible;
 }
 
+input {
+  border: 0;
+  border-bottom: 1px solid #0e902d;
+}
+
+textarea {
+  border: 1px solid #0e902d;
+}
+
 button,
 select {
   text-transform: none;
@@ -187,7 +197,8 @@ button:-moz-focusring,
 }
 
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+  padding: 0;
+  border: 0;
 }
 
 legend {
@@ -278,7 +289,7 @@ p {
 
 .heading-md {
   font-family: "Josefin Sans";
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.6;
   letter-spacing: 0.05rem;
@@ -291,7 +302,7 @@ p {
   font-weight: bold;
   line-height: 1.6;
   letter-spacing: 0px;
-  color: #2c2c2c;
+  color: #074115;
 }
 
 .form-label {
@@ -556,20 +567,104 @@ p {
   background-size: cover;
 }
 
+.blog {
+  margin-bottom: 2rem;
+  background: #f0efed;
+}
+
 .blog .blog-img {
   -webkit-transform: translate(2.5%, -5%);
           transform: translate(2.5%, -5%);
 }
 
-.blog .blog-header {
-  margin: 2em 0;
+.blog .blog-body {
+  padding: 2em 0;
+  border-left: 0.25rem solid #f8e71c;
+  border-bottom: 0.25rem solid #f8e71c;
+}
+
+.blog .blog-body .blog-header {
+  margin: 0 0 2em;
   text-align: left;
 }
 
-.blog .blog-header .blog-meta {
+.blog .blog-body .blog-header .blog-meta {
   margin-top: 0;
   font-style: italic;
   color: #074115;
+}
+
+.blog .blog-comments-title {
+  margin: 1em 0;
+}
+
+.blog input,
+.blog textarea {
+  background: #f0efed;
+}
+
+.blog-comment {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(3rem, 4rem) auto;
+      grid-template-columns: minmax(3rem, 4rem) auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  gap: 1em;
+  margin-bottom: 3rem;
+}
+
+.blog-comment .comment-user-img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.blog-comment .comment-title {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.blog-comment .comment-body {
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+}
+
+.blog-comment .comment-body p {
+  margin-top: 0;
+}
+
+.blog-info {
+  padding: 3rem 0;
+}
+
+.blog-info h2 {
+  line-height: 1;
+}
+
+.blog-info-about {
+  margin-bottom: 3rem;
+}
+
+.blog-info-recent .recent-posts {
+  margin-top: 1em;
+  padding-left: 0.5rem;
+}
+
+.blog-info-recent .recent-posts li::before {
+  content: '•';
+  padding-right: 1em;
+  color: #0e902d;
 }
 
 .menu-btn {
@@ -721,12 +816,44 @@ p {
   margin-right: 1rem;
 }
 
-.blog-comment {
+.form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.blog-comment .comment-user-img {
-  width: 4rem;
+.form .form-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form .form-inputs input {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.form input,
+.form textarea {
+  padding: 2em 1em 0.5em;
+  font-family: "Josefin Sans";
+  font-size: 1rem;
+  font-weight: regular;
+  line-height: 1.6;
+  letter-spacing: 0px;
+  color: #2c2c2c;
+}
+
+.find-more {
+  font-style: italic;
+  font-weight: bold;
+  color: #074115;
 }
