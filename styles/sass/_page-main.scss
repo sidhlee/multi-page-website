@@ -1,6 +1,7 @@
 .about {
-	height: var(--hero-main-height);
-	padding: 4rem 0;
+	min-height: var(--hero-main-height);
+	// give little more attention than other sections by adding more vertical space
+	padding: calc(var(--py) * 1.5) 0;
 	background-color: var(--bg-secondary);
 	display: flex;
 	justify-content: center;
@@ -100,7 +101,7 @@
 		background-image: url('../../images/banner-image.jpg');
 		background-position: 18%;
 	}
-	.container {
+	.container-founder {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -114,11 +115,19 @@
 			width: $size;
 			height: $size;
 			margin-top: 2rem;
+			// don't shrink in the flex box
+			flex-shrink: 0;
 		}
 	}
 	h2.heading-lg {
 		// remove spacing defined in heading-lg class
 		letter-spacing: 0;
+	}
+
+	@media (min-width: $desktop) {
+		.container-founder {
+			flex-direction: row;
+		}
 	}
 }
 

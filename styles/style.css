@@ -131,7 +131,7 @@ p {
 
 .heading-whatis {
   font-family: var(--ff-heading);
-  font-size: Min(Max(2rem, 6vw), 2.815rem);
+  font-size: Min(Max(2rem, 5vw), 2.815rem);
   font-weight: bold;
   letter-spacing: 0.065rem;
   line-height: 1.4;
@@ -671,8 +671,8 @@ img {
 }
 
 .about {
-  height: var(--hero-main-height);
-  padding: 4rem 0;
+  min-height: var(--hero-main-height);
+  padding: calc(var(--py) * 1.5) 0;
   background-color: var(--bg-secondary);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -796,7 +796,7 @@ img {
   background-position: 18%;
 }
 
-.founder .container {
+.founder .container-founder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -813,14 +813,25 @@ img {
   padding-bottom: 3rem;
 }
 
-.founder .container .founder-img {
+.founder .container-founder .founder-img {
   width: 15rem;
   height: 15rem;
   margin-top: 2rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .founder h2.heading-lg {
   letter-spacing: 0;
+}
+
+@media (min-width: 900px) {
+  .founder .container-founder {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .gallery {
