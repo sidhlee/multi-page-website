@@ -88,9 +88,7 @@
 }
 
 .feature-item {
-	&:not(:last-of-type) {
-		margin-bottom: var(--py);
-	}
+	max-width: 30rem;
 	text-align: center;
 	.feature-heading {
 		display: flex;

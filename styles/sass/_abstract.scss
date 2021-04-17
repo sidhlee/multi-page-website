@@ -26,7 +26,7 @@ $mw: 1600px;
 	// horizontal padding inside container
 	--px: Min(Max(1rem, 5vw), 3rem);
 	// vertical padding inside container
-	--py: 4rem;
+	--py: Min(Max(3rem, 10vw), 5rem);
 	--hero-height: Min(Max(15rem, 31vw), 20rem);
 	--hero-main-height: Min(Max(15rem, 45vw), 30rem);
 	--form-border: 1px solid var(--clr-primary);
