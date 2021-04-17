@@ -9,7 +9,7 @@
 	justify-content: space-between;
 	align-items: flex-end;
 	padding: 0.5em;
-	z-index: $z-menu-btn;
+	z-index: var(--z-menu-btn);
 	span {
 		width: 80%;
 	}
@@ -31,7 +31,7 @@
 	&::after {
 		display: block;
 		height: 3px;
-		background-color: $text-inverse;
+		background-color: var(--text-inverse);
 
 		box-shadow: 1px 1px 0 1.5px rgba(0, 0, 0, 1);
 	}
@@ -42,7 +42,7 @@
 
 .menu-toggler:checked + .menu-modal {
 	opacity: 1;
-	z-index: $z-menu-modal;
+	z-index: var(--z-menu-modal);
 	transform: translateY(0%);
 }
 
@@ -65,9 +65,9 @@
 .btn {
 	display: inline-block;
 	margin-top: 1.5em;
-	background: $clr-primary;
+	background: var(--clr-primary);
 	padding: 0.5em 1.5em;
-	@include text-style($fz: 1rem, $fw: bold, $color: $text-inverse);
+	@include text-style($fz: 1rem, $fw: bold, $color: var(--text-inverse));
 }
 
 .card {
@@ -95,7 +95,7 @@
 
 .feature-item {
 	&:not(:last-of-type) {
-		margin-bottom: $py;
+		margin-bottom: var(--py);
 	}
 	text-align: center;
 	.feature-heading {
@@ -108,7 +108,7 @@
 			--size: 2em;
 			width: var(--size);
 			height: var(--size);
-			background-color: $clr-accent;
+			background-color: var(--clr-accent);
 			font-size: 1.2rem;
 			border-radius: 50%;
 			margin-right: 1rem;
@@ -138,14 +138,14 @@
 .find-more {
 	font-style: italic;
 	font-weight: bold;
-	color: $text-secondary;
+	color: var(--text-secondary);
 }
 
 .socials {
 	display: flex;
 	width: 100%;
 	a {
-		color: $clr-primary;
+		color: var(--clr-primary);
 		padding: 2em;
 	}
 }

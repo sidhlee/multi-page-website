@@ -10,10 +10,10 @@
 	text-align: center;
 	.nav-links {
 		display: none;
-		font-family: $ff-heading;
+		font-family: var(--ff-heading);
 		text-transform: uppercase;
 		a {
-			color: $text-main;
+			color: var(--text-main);
 		}
 		@media (min-width: $desktop) {
 			display: flex;
@@ -47,13 +47,13 @@
 	.nav-links {
 		width: auto;
 		a {
-			color: $text-inverse;
+			color: var(--text-inverse);
 		}
 	}
 }
 
 .navbar.navbar-bg {
-	background: $clr-navbar;
+	background: var(--clr-navbar);
 }
 
 /* =========================
@@ -61,7 +61,7 @@
  * ======================== */
 .header {
 	.logo {
-		color: $text-inverse;
+		color: var(--text-inverse);
 		font-size: 1.25rem;
 	}
 }
@@ -73,7 +73,7 @@
 
 	.hero-main {
 		width: 100%;
-		min-height: $hero-main-height;
+		min-height: var(--hero-main-height);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -88,7 +88,7 @@
 }
 
 .hero {
-	height: $hero-height;
+	height: var(--hero-height);
 	padding: 4rem;
 	background-size: cover;
 	display: flex;
@@ -105,7 +105,7 @@
 
 .footer {
 	padding: 0.25em 0;
-	background: $text-main;
-	color: $text-inverse;
+	background: var(--text-main);
+	color: var(--text-inverse);
 	text-align: center;
 }

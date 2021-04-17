@@ -6,52 +6,45 @@
 $desktop: 800px;
 $mw: 1400px;
 
-// colors
-$clr-primary: #0e902d;
-$clr-accent: #f8e71c;
-$text-main: #2c2c2c;
-$text-secondary: #074115;
-$text-inverse: #f0efed;
-$bg-secondary: #f0efed;
-
-$clr-navbar: rgb(20, 20, 20);
-
-// font
-$ff-body: Roboto;
-$ff-heading: 'Josefin Sans';
-
-// outer gutter width
-$px: Min(Max(1rem, 5vw), 3rem);
-// section top/bottom padding
-$py: 2em;
-
-$hero-height: Min(Max(70vw, 15rem), 30rem);
-$hero-main-height: 15rem;
-
-$z-menu-btn: 1000;
-$z-menu-modal: 500;
-
-$form-border: 1px solid $clr-primary;
-
 :root {
+	/* Colors */
+	--clr-primary: #0e902d;
+	--clr-accent: #f8e71c;
+	--text-main: #2c2c2c;
+	--text-secondary: #074115;
+	--text-inverse: #f0efed;
+	--bg-secondary: #f0efed;
+	--clr-navbar: rgb(20, 20, 20);
+
+	/* Typography */
+	--ff-body: Roboto;
+	--ff-heading: 'Josefin Sans';
+	--ff-body: Roboto;
+	--ff-heading: 'Josefin Sans';
+
+	/* Spacing */
 	// horizontal padding inside container
 	--px: Min(Max(1rem, 5vw), 3rem);
 	// vertical padding inside container
 	--py: 2em;
 	--hero-height: 15rem;
 	--hero-main-height: 15rem;
+	--form-border: 1px solid var(--clr-primary);
+
+	--z-menu-btn: 1000;
+	--z-menu-modal: 500;
 }
 
 /* =========================
  *  Mixins
  * ======================== */
 @mixin text-style(
-	$ff: $ff-heading,
+	$ff: var(--ff-heading),
 	$fz: 1rem,
 	$fw: regular,
 	$lh: 1.6,
 	$ls: 0px,
-	$color: $text-main
+	$color: var(--text-main)
 ) {
 	font-family: $ff;
 	font-size: $fz;
@@ -88,7 +81,7 @@ $form-border: 1px solid $clr-primary;
 }
 
 .accent {
-	color: $clr-accent;
+	color: var(--clr-accent);
 }
 
 .container {
@@ -117,7 +110,7 @@ $form-border: 1px solid $clr-primary;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: $clr-accent;
+		background-color: var(--clr-accent);
 		transform: translate(1rem, 1rem);
 		z-index: -1;
 	}

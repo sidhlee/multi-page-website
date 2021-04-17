@@ -13,7 +13,7 @@ html {
 }
 body {
 	margin: 0;
-	font-family: $ff-body, sans-serif;
+	font-family: var(--ff-body), sans-serif;
 	line-height: 1.6;
 }
 article,
@@ -83,11 +83,11 @@ input {
 
 input {
 	border: 0;
-	border-bottom: $form-border;
+	border-bottom: var(--form-border);
 }
 
 textarea {
-	border: $form-border;
+	border: var(--form-border);
 }
 
 button,

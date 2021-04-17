@@ -1,6 +1,6 @@
 .about {
 	padding: 4rem 0;
-	background-color: $bg-secondary;
+	background-color: var(--bg-secondary);
 	p {
 		max-width: 55rem;
 	}
@@ -33,7 +33,7 @@
 }
 
 .features {
-	background: $bg-secondary;
+	background: var(--bg-secondary);
 	padding: 4em 0;
 }
 
@@ -50,7 +50,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		background: $bg-secondary;
+		background: var(--bg-secondary);
 		// place container "behind" the image shadow
 		position: relative;
 		z-index: -100;

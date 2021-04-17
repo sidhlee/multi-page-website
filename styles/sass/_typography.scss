@@ -13,12 +13,17 @@ p {
 		$fz: Min(Max(3.5rem, 15vw), 5rem),
 		$fw: 400,
 		$lh: 0.8,
-		$color: $text-inverse
+		$color: var(--text-inverse)
 	);
 }
 
 .heading-xl {
-	@include text-style($fz: 3rem, $fw: bold, $lh: 1.15, $color: $clr-accent);
+	@include text-style(
+		$fz: 3rem,
+		$fw: bold,
+		$lh: 1.15,
+		$color: var(--clr-accent)
+	);
 }
 
 .heading-whatis {
@@ -34,7 +39,7 @@ p {
 }
 
 .heading-sm {
-	@include text-style($fz: 1rem, $fw: bold, $color: $text-secondary);
+	@include text-style($fz: 1rem, $fw: bold, $color: var(--text-secondary));
 }
 
 .form-label {
@@ -47,7 +52,7 @@ p {
 			$fz: Min(Max(5rem, 14vw), 8.3rem),
 			$fw: 400,
 			$lh: 0.8,
-			$color: $text-inverse
+			$color: var(--text-inverse)
 		);
 	}
 
