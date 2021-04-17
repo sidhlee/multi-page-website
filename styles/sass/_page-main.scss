@@ -9,23 +9,48 @@
 .events {
 	display: flex;
 	flex-direction: column;
+	// remove padding set in container class
+	padding: 0;
+
+	// make shadow shorter than image
+	.card-img::after {
+		height: calc(100% * 0.95);
+		// shadow element already has position: absolute;
+		top: 5%;
+	}
 
 	@media (min-width: $desktop) {
 		flex-direction: row;
+		justify-content: space-between;
+		.card {
+			max-width: 32rem;
+		}
+
+		--img-offset: 2rem;
 
 		.card:first-of-type {
-			margin: 0 auto 0 var(--px);
+			padding-right: 1em;
+			.card-img {
+				position: relative;
+				// shadow gets hidden under about section background
+				bottom: var(--img-offset);
+			}
 			.card-body {
+				padding-left: var(--px);
 				text-align: right;
 			}
 		}
 
 		.card:last-of-type {
-			margin: 0 var(--px) 0 auto;
+			padding-left: 1em;
 			.card-img {
 				order: 2;
+				position: relative;
+				// shadow gets hidden under about section background
+				top: var(--img-offset);
 			}
 			.card-body {
+				padding-right: var(--px);
 				text-align: left;
 			}
 		}

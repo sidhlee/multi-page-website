@@ -4,7 +4,7 @@
 
 // Breakpoints
 $desktop: 900px;
-$mw: 1400px;
+$mw: 1600px;
 
 :root {
 	/* Colors */
@@ -33,6 +33,8 @@ $mw: 1400px;
 
 	--z-menu-btn: 1000;
 	--z-menu-modal: 500;
+
+	--shadow-offset: 1rem;
 }
 
 /* =========================
@@ -111,14 +113,17 @@ $mw: 1400px;
 		width: 100%;
 		height: 100%;
 		background-color: var(--clr-accent);
-		transform: translate(1rem, 1rem);
+		transform: translate(var(--shadow-offset), var(--shadow-offset));
 		z-index: -1;
 	}
 
 	&.shadow-left {
 		transform: translate(1rem, 0);
 		&::after {
-			transform: translate(-1rem, 1rem);
+			transform: translate(
+				calc(-1 * var(--shadow-offset)),
+				var(--shadow-offset)
+			);
 		}
 	}
 }

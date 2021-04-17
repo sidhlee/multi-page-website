@@ -76,18 +76,9 @@
 	width: 100%;
 	// don't grow wider than image width!
 	max-width: 670px;
-	margin: 0 auto;
 	// caused by shadow
 	display: flex;
 	flex-direction: column;
-	.card-img {
-		&.shadow {
-			transform: translate(calc(-1 * var(--px)), -1rem);
-		}
-		&.shadow-left {
-			transform: translate(calc(1 * var(--px)), -1rem);
-		}
-	}
 }
 
 .card-body {
