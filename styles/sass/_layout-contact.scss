@@ -1,0 +1,29 @@
+.hero-contact {
+	background-image: url('../../images/contact-header-1.jpg');
+}
+
+.form-contact {
+	background-color: white;
+	&::after {
+		// remove accent border;
+		display: none;
+	}
+}
+
+.contact-info {
+	margin-top: 2rem;
+	text-align: center;
+	padding: 3rem 0;
+}
+
+.contact-email {
+	display: inline-block;
+	margin-top: 1em;
+	@include text-style($fz: 1.2rem, $fw: bold, $color: $text-main);
+}
+
+.address {
+	p {
+		margin-top: 0.5em;
+	}
+}

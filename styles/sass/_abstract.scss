@@ -34,6 +34,13 @@ $z-menu-modal: 500;
 
 $form-border: 1px solid $clr-primary;
 
+:root {
+	--px: Min(Max(1rem, 5vw), 3rem);
+	--py: 2em;
+	--hero-height: 15rem;
+	--hero-main-height: 15rem;
+}
+
 /* =========================
  *  Mixins
  * ======================== */
@@ -87,8 +94,8 @@ $form-border: 1px solid $clr-primary;
 	width: 100%;
 	max-width: $mw;
 	margin: 0 auto;
-	padding-left: $px;
-	padding-right: $px;
+	padding-left: var(--px);
+	padding-right: var(--px);
 }
 
 .center {
@@ -110,13 +117,14 @@ $form-border: 1px solid $clr-primary;
 		width: 100%;
 		height: 100%;
 		background-color: $clr-accent;
-		transform: translate(5%, 5%);
+		transform: translate(1rem, 1rem);
 		z-index: -1;
 	}
 
 	&.shadow-left {
+		// transform: translate(1rem, 0);
 		&::after {
-			transform: translate(-5%, 5%);
+			transform: translate(-1rem, 1rem);
 		}
 	}
 }

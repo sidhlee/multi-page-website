@@ -145,3 +145,12 @@
 	font-weight: bold;
 	color: $text-secondary;
 }
+
+.socials {
+	display: flex;
+	width: 100%;
+	a {
+		color: $clr-primary;
+		padding: 2em;
+	}
+}
