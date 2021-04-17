@@ -79,10 +79,11 @@
 	// caused by shadow
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 }
 
 .card-body {
-	padding: var(--py) 0;
+	padding: 2em 0;
 	text-align: center;
 }
 

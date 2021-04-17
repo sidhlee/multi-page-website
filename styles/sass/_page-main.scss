@@ -1,6 +1,10 @@
 .about {
+	height: var(--hero-main-height);
 	padding: 4rem 0;
 	background-color: var(--bg-secondary);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	p {
 		max-width: 55rem;
 	}
@@ -30,27 +34,31 @@
 
 		.card:first-of-type {
 			padding-right: 1em;
+			position: relative;
+			bottom: var(--img-offset);
 			.card-img {
 				position: relative;
 				// shadow gets hidden under about section background
-				bottom: var(--img-offset);
 			}
 			.card-body {
 				padding-left: var(--px);
+				padding-bottom: 1em;
 				text-align: right;
 			}
 		}
 
 		.card:last-of-type {
 			padding-left: 1em;
+			position: relative;
+			top: var(--img-offset);
 			.card-img {
 				order: 2;
-				position: relative;
-				// shadow gets hidden under about section background
-				top: var(--img-offset);
 			}
 			.card-body {
+				padding-top: -var(--py);
 				padding-right: var(--px);
+				padding-bottom: 3rem;
+
 				text-align: left;
 			}
 		}
@@ -60,6 +68,9 @@
 .features {
 	background: var(--bg-secondary);
 	padding: 4em 0;
+
+	@media (min-width: $desktop) {
+	}
 }
 
 .founder {

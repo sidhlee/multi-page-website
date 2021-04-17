@@ -18,7 +18,7 @@
   --ff-heading: 'Josefin Sans';
   /* Spacing */
   --px: Min(Max(1rem, 5vw), 3rem);
-  --py: 2em;
+  --py: 4rem;
   --hero-height: Min(Max(15rem, 31vw), 20rem);
   --hero-main-height: Min(Max(15rem, 45vw), 30rem);
   --form-border: 1px solid var(--clr-primary);
@@ -436,10 +436,13 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card-body {
-  padding: var(--py) 0;
+  padding: 2em 0;
   text-align: center;
 }
 
@@ -671,8 +674,18 @@ img {
 }
 
 .about {
+  height: var(--hero-main-height);
   padding: 4rem 0;
   background-color: var(--bg-secondary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about p {
@@ -711,27 +724,31 @@ img {
   }
   .events .card:first-of-type {
     padding-right: 1em;
-  }
-  .events .card:first-of-type .card-img {
     position: relative;
     bottom: var(--img-offset);
   }
+  .events .card:first-of-type .card-img {
+    position: relative;
+  }
   .events .card:first-of-type .card-body {
     padding-left: var(--px);
+    padding-bottom: 1em;
     text-align: right;
   }
   .events .card:last-of-type {
     padding-left: 1em;
+    position: relative;
+    top: var(--img-offset);
   }
   .events .card:last-of-type .card-img {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    position: relative;
-    top: var(--img-offset);
   }
   .events .card:last-of-type .card-body {
+    padding-top: -var(--py);
     padding-right: var(--px);
+    padding-bottom: 3rem;
     text-align: left;
   }
 }
