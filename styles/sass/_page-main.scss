@@ -62,6 +62,10 @@
 			margin-top: 2rem;
 		}
 	}
+	h2.heading-lg {
+		// remove spacing defined in heading-lg class
+		letter-spacing: 0;
+	}
 }
 
 .gallery {
