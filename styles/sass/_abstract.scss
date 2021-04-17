@@ -3,7 +3,7 @@
  * ======================== */
 
 // Breakpoints
-$desktop: 900px;
+$desktop: 1000px;
 $mw: 1600px;
 
 :root {
@@ -27,7 +27,7 @@ $mw: 1600px;
 
 	/* Spacing */
 	// horizontal padding inside container
-	--px-xs: Min(Max(0.5rem, 5vw), 2em);
+	--px-xs: Min(Max(0.5rem, 4vw), 1em);
 	--px: Min(Max(1rem, 7vw), 5rem);
 	// vertical padding inside container
 	--py: Min(Max(3rem, 10vw), 5rem);

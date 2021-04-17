@@ -24,9 +24,9 @@
   <label class="menu-modal" for="menu-toggler">
     <nav class="nav nav-modal">
       <ul class="nav-links">
-        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="/#about">About</a></li>
-        <li><a href="/blog.html">Blog</a></li>
+        <li><a class="active" href="/blog.html">Blog</a></li>
         <li><a href="/contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -37,9 +37,9 @@
       <div class="container">
         <a href="#" class="logo">Planted</a>
         <ul class="nav-links">
-          <li><a class="active" href="/">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="/#about">About</a></li>
-          <li><a href="/blog.html">Blog</a></li>
+          <li><a class="active" href="/blog.html">Blog</a></li>
           <li><a href="/contact.html">Contact</a></li>
         </ul>
       </div>
@@ -53,43 +53,45 @@
     <main class="blog-main">
 
       <section class="blog">
-        <div class="blog-img shadow shadow-left">
-          <img src="../images/post-image.jpg" alt="">
-        </div>
-        <div class="blog-body">
-          <header class="blog-header">
-            <h2 class="blog-title heading-lg">Our mission at Planted</h2>
-            <p class="blog-meta"><time>Monday January 21th, 2019</time>by <span class="meta-by">Yousra</span> </p>
-          </header>
-          <div class="blog-content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nihil facilis, possimus
-              architecto,
-              quibusdam vel corporis maiores, aut laboriosam quod obcaecati dolor error harum odit! Quasi tempora
-              inventore animi rem.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus rerum autem odit qui porro ad,
-              quasi
-              tenetur, consectetur accusantium ipsam nesciunt ut sequi voluptatibus quam exercitationem corporis sunt!
-              Consectetur impedit labore in numquam! Officia eaque facere ex, beatae doloremque ipsam.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officia? Alias, natus. Incidunt doloribus
-              quibusdam vero repudiandae quidem ipsum provident minus nostrum odio cum laudantium ex ratione quia
-              magnam
-              dignissimos animi, blanditiis accusamus inventore maxime. Quae, explicabo. Facilis, dolore quaerat.
-              Laborum
-              tempore ipsa quos quibusdam veniam, esse doloribus sed at corrupti blanditiis eveniet, saepe dignissimos
-              neque aperiam, ducimus hic expedita sequi voluptas culpa dolores! Asperiores quaerat pariatur,
-              cupiditate
-              nesciunt in eos. Harum aperiam omnis maxime commodi vero deserunt doloribus inventore facilis laborum
-              neque
-              est reiciendis, libero, quae sit. Delectus, incidunt.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aliquid fuga aspernatur illum quidem.
-              Magni
-              molestiae dolor impedit sed quo?</p>
+        <div class="blog-inner">
+          <div class="blog-img shadow shadow-left">
+            <img src="../images/post-image.jpg" alt="">
+          </div>
+          <div class="blog-body">
+            <header class="blog-header">
+              <h2 class="blog-title heading-lg">Our mission at Planted</h2>
+              <p class="blog-meta"><time>Monday January 21th, 2019</time>by <span class="meta-by">Yousra</span> </p>
+            </header>
+            <div class="blog-content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nihil facilis, possimus
+                architecto,
+                quibusdam vel corporis maiores, aut laboriosam quod obcaecati dolor error harum odit! Quasi tempora
+                inventore animi rem.</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus rerum autem odit qui porro ad,
+                quasi
+                tenetur, consectetur accusantium ipsam nesciunt ut sequi voluptatibus quam exercitationem corporis sunt!
+                Consectetur impedit labore in numquam! Officia eaque facere ex, beatae doloremque ipsam.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officia? Alias, natus. Incidunt doloribus
+                quibusdam vero repudiandae quidem ipsum provident minus nostrum odio cum laudantium ex ratione quia
+                magnam
+                dignissimos animi, blanditiis accusamus inventore maxime. Quae, explicabo. Facilis, dolore quaerat.
+                Laborum
+                tempore ipsa quos quibusdam veniam, esse doloribus sed at corrupti blanditiis eveniet, saepe dignissimos
+                neque aperiam, ducimus hic expedita sequi voluptas culpa dolores! Asperiores quaerat pariatur,
+                cupiditate
+                nesciunt in eos. Harum aperiam omnis maxime commodi vero deserunt doloribus inventore facilis laborum
+                neque
+                est reiciendis, libero, quae sit. Delectus, incidunt.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aliquid fuga aspernatur illum quidem.
+                Magni
+                molestiae dolor impedit sed quo?</p>
+            </div>
           </div>
         </div>
 
-        <div class="blog-comments-wrapper">
+        <section class="blog-comments">
           <h2 class="blog-comments-title">Comments</h2>
-          <ul class="blog-comments">
+          <ul class="blog-comment-list">
             <li class="blog-comment">
               <div class="comment-user-img">
                 <img src="./images/profile-image.jpg" alt="">
@@ -113,10 +115,10 @@
               </div>
             </li>
           </ul>
-        </div>
+        </section>
 
 
-        <form action="" class="form">
+        <form action="" class="form form-blog">
           <fieldset class="form-inputs">
             <label for="name" class="sr-only">Name</label>
             <input type="text" name="name" id="name" placeholder="Name" aria-label="Name">
@@ -131,20 +133,19 @@
     </main>
 
 
-    <aside class="blog-info bg-secondary">
+    <aside class="blog-info sidebar bg-secondary">
       <div class="blog-info-about">
         <h2 class="heading-md">About Planted</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi delectus repellendus incidunt maxime
-          fuga
-          cumque doloribus est temporibus itaque deleniti. <span class="find-more">Find out more.</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi delectus
+          itaque deleniti. <span class="find-more">Find out more.</span></p>
       </div>
       <div class="blog-info-recent">
         <h2 class="heading-md">Recent Posts</h2>
         <ul class="recent-posts">
           <li>Lorem ipsum dolor sit.</li>
-          <li>Suscipit tempore delectus libero?</li>
+          <li>Suscipit tempore delectus</li>
           <li>Ex ipsam maxime quibusdam.</li>
-          <li>Laboriosam aliquid reprehenderit vero.</li>
+          <li>Laboriosam aliquid reprehenderit.</li>
         </ul>
       </div>
     </aside>

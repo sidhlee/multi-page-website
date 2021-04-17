@@ -124,6 +124,12 @@
 			display: block;
 			margin-bottom: 1em;
 		}
+		@media (min-width: $desktop) {
+			flex-direction: row;
+			input:first-of-type {
+				margin-right: 2em;
+			}
+		}
 	}
 	input,
 	textarea {
@@ -133,6 +139,7 @@
 		font-family: var(--ff-heading);
 		font-size: 1rem;
 		font-weight: 400;
+		background: var(--bg-primary);
 	}
 	textarea {
 		padding: 2em 1.5em;
