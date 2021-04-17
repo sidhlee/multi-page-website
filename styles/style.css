@@ -557,14 +557,8 @@ p {
   text-align: center;
 }
 
-.header-blog .navbar {
-  background: #222;
-}
-
 .header-blog .hero {
-  height: 15rem;
   background-image: url("../../images/blog-header-1.jpg");
-  background-size: cover;
 }
 
 .blog {
@@ -743,6 +737,22 @@ p {
   transition: all 200ms ease;
   -webkit-transform: translateY(-20%);
           transform: translateY(-20%);
+}
+
+.navbar.navbar-bg {
+  background: #222;
+}
+
+.hero {
+  height: 15rem;
+  padding: 4rem;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .btn {
