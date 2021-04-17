@@ -617,6 +617,31 @@ img {
   font-size: 1.25rem;
 }
 
+.hero {
+  height: var(--hero-height);
+  padding: 4rem;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+/* =========================
+ *  Main
+ * ======================== */
+/* =========================
+ *  Footer
+ * ======================== */
+.footer {
+  padding: 0.25em 0;
+  background: var(--text-main);
+  color: var(--text-inverse);
+  text-align: center;
+}
+
 .header-home {
   background: url("../../images/home-image-1.jpg");
   background-size: cover;
@@ -645,29 +670,22 @@ img {
   left: 5%;
 }
 
-.hero {
-  height: var(--hero-height);
-  padding: 4rem;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-/* =========================
- *  Main
- * ======================== */
-/* =========================
- *  Footer
- * ======================== */
-.footer {
-  padding: 0.25em 0;
-  background: var(--text-main);
-  color: var(--text-inverse);
-  text-align: center;
+@media (min-width: 900px) {
+  .header-home {
+    position: relative;
+  }
+  .header-home::before {
+    --size: Min(Max(20rem, calc(6rem + 33vw)), 50rem);
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: calc(-0.1 * var(--size));
+    width: var(--size);
+    height: var(--size);
+    background-image: url("../../images/header-box.jpg");
+    background-image: cover;
+    background-position: center;
+  }
 }
 
 .about {

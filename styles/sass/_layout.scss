@@ -66,27 +66,6 @@
 	}
 }
 
-.header-home {
-	background: url('../../images/home-image-1.jpg');
-	background-size: cover;
-	background-position: center;
-
-	.hero-main {
-		width: 100%;
-		min-height: var(--hero-main-height);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		h1 {
-			// text-align: center;
-			width: min-content;
-			position: relative;
-			// align h1 centered around "planted"
-			left: 5%;
-		}
-	}
-}
-
 .hero {
 	height: var(--hero-height);
 	padding: 4rem;

@@ -1,3 +1,41 @@
+.header-home {
+	background: url('../../images/home-image-1.jpg');
+	background-size: cover;
+	background-position: center;
+
+	.hero-main {
+		width: 100%;
+		min-height: var(--hero-main-height);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h1 {
+			// text-align: center;
+			width: min-content;
+			position: relative;
+			// align h1 centered around "planted"
+			left: 5%;
+		}
+	}
+
+	@media (min-width: $desktop) {
+		position: relative;
+		&::before {
+			--size: Min(Max(20rem, calc(6rem + 33vw)), 50rem);
+
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: calc(-0.1 * var(--size));
+			width: var(--size);
+			height: var(--size);
+			background-image: url('../../images/header-box.jpg');
+			background-image: cover;
+			background-position: center;
+		}
+	}
+}
+
 .about {
 	min-height: var(--hero-main-height);
 	// give little more attention than other sections by adding more vertical space
