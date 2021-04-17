@@ -17,7 +17,7 @@
   --ff-body: Roboto;
   --ff-heading: 'Josefin Sans';
   /* Spacing */
-  --px: Min(Max(1rem, 5vw), 3rem);
+  --px: Min(Max(1rem, 7vw), 5rem);
   --py: Min(Max(3rem, 10vw), 5rem);
   --hero-height: Min(Max(15rem, 31vw), 20rem);
   --hero-main-height: Min(Max(15rem, 45vw), 30rem);
@@ -797,6 +797,8 @@ img {
 }
 
 .founder .container-founder {
+  padding-top: var(--py);
+  padding-bottom: var(--py);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -816,9 +818,9 @@ img {
 .founder .container-founder .founder-img {
   width: 15rem;
   height: 15rem;
-  margin-top: 2rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  margin-top: 0 !important;
 }
 
 .founder h2.heading-lg {
@@ -826,16 +828,28 @@ img {
 }
 
 @media (min-width: 900px) {
+  .founder::before {
+    background-position: center;
+  }
   .founder .container-founder {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .founder .founder-img {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .founder .founder-content {
+    text-align: left;
+    padding-left: var(--px);
+    padding-top: 0;
+  }
 }
 
 .gallery {
-  padding: 3rem 0;
+  padding: var(--py) 0;
 }
 
 .gallery ul {

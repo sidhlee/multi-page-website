@@ -102,6 +102,8 @@
 		background-position: 18%;
 	}
 	.container-founder {
+		padding-top: var(--py);
+		padding-bottom: var(--py);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -114,9 +116,10 @@
 			$size: 15rem;
 			width: $size;
 			height: $size;
-			margin-top: 2rem;
 			// don't shrink in the flex box
 			flex-shrink: 0;
+			// firefox injects margin-top: 2rem; inline on image-wrappers
+			margin-top: 0 !important;
 		}
 	}
 	h2.heading-lg {
@@ -125,14 +128,26 @@
 	}
 
 	@media (min-width: $desktop) {
+		&::before {
+			background-position: center;
+		}
 		.container-founder {
 			flex-direction: row;
+		}
+		.founder-img {
+			align-self: flex-start;
+		}
+		.founder-content {
+			text-align: left;
+			padding-left: var(--px);
+			// override padding from card class
+			padding-top: 0;
 		}
 	}
 }
 
 .gallery {
-	padding: 3rem 0;
+	padding: var(--py) 0;
 	ul {
 		display: flex;
 		width: 100%;
