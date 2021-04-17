@@ -1,5 +1,8 @@
 .hero-contact {
 	background-image: url('../../images/contact-header-1.jpg');
+	h1 {
+		width: min-content;
+	}
 }
 
 .container-form-comment {

@@ -121,6 +121,10 @@
           transform: translate(calc(-1 * var(--shadow-offset)), var(--shadow-offset));
 }
 
+.hero-heading {
+  min-height: 2em;
+}
+
 h1,
 h2,
 h3 {
@@ -662,7 +666,7 @@ img {
  * ======================== */
 .hero {
   height: var(--hero-height);
-  padding: 4rem;
+  padding: 1rem 4rem;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1144,6 +1148,12 @@ img {
 
 .hero-contact {
   background-image: url("../../images/contact-header-1.jpg");
+}
+
+.hero-contact h1 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .form-contact {
