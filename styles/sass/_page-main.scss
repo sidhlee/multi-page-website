@@ -37,10 +37,7 @@
 			padding-right: 1em;
 			position: relative;
 			bottom: var(--img-offset);
-			.card-img {
-				position: relative;
-				// shadow gets hidden under about section background
-			}
+
 			.card-body {
 				padding-left: var(--px);
 				padding-bottom: 1em;
@@ -54,6 +51,9 @@
 			top: var(--img-offset);
 			.card-img {
 				order: 2;
+				// remove horizontal scroll
+				position: relative;
+				right: calc(var(--img-offset) / 2);
 			}
 			.card-body {
 				padding-top: -var(--py);

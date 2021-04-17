@@ -724,9 +724,6 @@ img {
     position: relative;
     bottom: var(--img-offset);
   }
-  .events .card:first-of-type .card-img {
-    position: relative;
-  }
   .events .card:first-of-type .card-body {
     padding-left: var(--px);
     padding-bottom: 1em;
@@ -741,6 +738,8 @@ img {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    position: relative;
+    right: calc(var(--img-offset) / 2);
   }
   .events .card:last-of-type .card-body {
     padding-top: -var(--py);
