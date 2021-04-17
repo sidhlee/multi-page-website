@@ -22,7 +22,7 @@
   --px-xs: Min(Max(0.5rem, 4vw), 1em);
   --px: Min(Max(1rem, 7vw), 5rem);
   --py: Min(Max(3rem, 10vw), 5rem);
-  --hero-height: Min(Max(15rem, 31vw), 20rem);
+  --hero-height: Min(Max(15rem, 38vw), 20rem);
   --hero-main-height: Min(Max(15rem, 45vw), 40rem);
   --form-border: 1px solid var(--clr-primary);
   --z-menu-btn: 1000;
@@ -968,15 +968,15 @@ img {
     gap: Min(Max(1em, 4vw), 2em);
   }
   .container-blog-page main {
-    overflow-x: hidden;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2 / 3;
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1 / 3;
+    max-width: 975px;
     margin-top: var(--blog-main-y-offset);
-    margin-right: calc(-1 * var(--px));
+    margin-right: calc(-1 * var(--px) + var(--shadow-offset));
     margin-bottom: 2rem;
   }
   .container-blog-page main .blog-body,
@@ -1027,7 +1027,9 @@ img {
 }
 
 .blog-inner .blog-body {
-  padding: 2em 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 1em;
   border-left: 0.25rem solid var(--clr-accent);
   border-bottom: 0.25rem solid var(--clr-accent);
 }
@@ -1054,6 +1056,7 @@ img {
 
 .blog-comments {
   margin-top: 2rem;
+  padding-left: 1em;
 }
 
 .blog-comment {
