@@ -22,7 +22,7 @@
   --px-xs: Min(Max(0.5rem, 4vw), 1em);
   --px: Min(Max(1rem, 7vw), 5rem);
   --py: Min(Max(3rem, 10vw), 5rem);
-  --hero-height: Min(Max(15rem, 38vw), 20rem);
+  --hero-height: Min(Max(15rem, 28vw), 38rem);
   --hero-main-height: Min(Max(15rem, 45vw), 40rem);
   --form-border: 1px solid var(--clr-primary);
   --z-menu-btn: 1000;
@@ -204,6 +204,7 @@ body {
   font-family: var(--ff-body), sans-serif;
   line-height: 1.6;
   background-color: var(--bg-primary);
+  min-height: 100vh;
 }
 
 article,
@@ -549,7 +550,7 @@ img {
   font-family: var(--ff-heading);
   font-size: 1rem;
   font-weight: 400;
-  background: var(--bg-primary);
+  background: transparent;
 }
 
 .form textarea {
@@ -566,6 +567,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
@@ -1146,6 +1150,30 @@ img {
   color: var(--clr-primary);
 }
 
+@media (min-width: 1000px) {
+  .container-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .container-main .form-shadow-wrapper {
+    position: relative;
+    bottom: 10rem;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .container-main .contact {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-right: 3rem;
+  }
+}
+
 .hero-contact {
   background-image: url("../../images/contact-header-1.jpg");
 }
@@ -1157,17 +1185,44 @@ img {
 }
 
 .form-contact {
-  background-color: white;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
 }
 
 .form-contact::after {
   display: none;
 }
 
-.contact-info {
+.contact {
   margin-top: 2rem;
   text-align: center;
   padding: 3rem 0;
+}
+
+.contact .socials {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 1000px) {
+  .contact {
+    text-align: left;
+  }
+  .contact .socials {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .contact .socials a {
+    padding: 1em;
+  }
+  .contact .contact-info {
+    padding: 1rem;
+  }
+  .contact .contact-info .contact-email {
+    margin-top: 0;
+  }
 }
 
 .contact-email {

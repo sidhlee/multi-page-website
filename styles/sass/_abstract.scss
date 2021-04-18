@@ -31,7 +31,7 @@ $mw: 1600px;
 	--px: Min(Max(1rem, 7vw), 5rem);
 	// vertical padding inside container
 	--py: Min(Max(3rem, 10vw), 5rem);
-	--hero-height: Min(Max(15rem, 38vw), 20rem);
+	--hero-height: Min(Max(15rem, 28vw), 38rem);
 	--hero-main-height: Min(Max(15rem, 45vw), 40rem);
 	--form-border: 1px solid var(--clr-primary);
 
@@ -144,11 +144,6 @@ $mw: 1600px;
 			);
 		}
 	}
-
-	// &::before + * {
-	// 	position: relative;
-	// 	z-index: 1000;
-	// }
 }
 
 .hero-heading {

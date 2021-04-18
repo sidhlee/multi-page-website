@@ -1,3 +1,20 @@
+.container-main {
+	@media (min-width: $desktop) {
+		display: flex;
+		align-items: flex-start;
+		.form-shadow-wrapper {
+			position: relative;
+			bottom: 10rem;
+			flex-grow: 1;
+		}
+
+		.contact {
+			order: -1;
+			margin-right: 3rem;
+		}
+	}
+}
+
 .hero-contact {
 	background-image: url('../../images/contact-header-1.jpg');
 	h1 {
@@ -5,21 +22,38 @@
 	}
 }
 
-.container-form-comment {
-}
-
 .form-contact {
-	background-color: white;
+	padding: 2rem;
+	background-color: var(--bg-secondary);
+
 	&::after {
 		// remove accent border;
 		display: none;
 	}
 }
 
-.contact-info {
+.contact {
 	margin-top: 2rem;
 	text-align: center;
 	padding: 3rem 0;
+	.socials {
+		justify-content: center;
+	}
+	@media (min-width: $desktop) {
+		.socials {
+			justify-content: flex-start;
+			a {
+				padding: 1em;
+			}
+		}
+		.contact-info {
+			padding: 1rem;
+			.contact-email {
+				margin-top: 0;
+			}
+		}
+		text-align: left;
+	}
 }
 
 .contact-email {
