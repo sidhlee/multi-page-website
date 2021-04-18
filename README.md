@@ -21,10 +21,6 @@ Additionally, you will be given a general mark on how well you adhere to best pr
 
 ### Presentation
 
-You will be presenting your project to the class on the day it's due. This is an opportunity for you to practice talking about your work in front of others, a skill that will be extremely vital in your job interviews once you begin your job search. The Career Services team will provide you with constructive feedback to help improve your technical communication skills as part of each projects evaluation.
-
-Be prepared to
-
 -   Discuss one technical win
 -   Discuss one technical challenge
 -   Stay within the specified time limit
@@ -32,7 +28,19 @@ Be prepared to
 -   Turn your Zoom video ON as both a presenter and observer
 -   Demonstrate the project effectively with screen-sharing tools
 
+## Technical Wins
+
+### Fluid layout with VW and CSS Math Functions
+
+I used viewport width unit on font-size and spacing to make them stretch and shrink based on the viewport width. This eliminates the need of having many media queries where we usually define different font sizes and padding & margin values to fit the current viewport.
+You can also limit the range of the font-size to avoid it getting too small or too big, and this can be done by combining CSS min function with max function. You can also create a fluid padding value with technique inside a wrapper container, to make it wider as the viewport width becomes greater. When you need smaller or larger padding value than the one you defined with vw, then you can use css calc function and scale that value as needed.
+(e.g. calc(0.5 \* var(--padding-x)));
+
 ## Technical Challenges
+
+### Handling overflow
+
+In this particular project, the biggest challenge for me was when dealing with elements that have some of its children element overflowing the parent container. Overflowing itself wasn't that difficult, but I found it tricky to come up with a way that allows for more responsiveness. For example, I had this card component that has its image part overflowing to the side. The solution was actually not overflowing the image at all. Instead, I used the same variable that I used for the wrapper padding, to indent the text content of the card to make it look like the image was overflowing the container. This solution only worked because the given design didn't have any borders around the card so the users can't see whether the image was sticking out or the content was having extra padding on one side.
 
 ### Un-checking input without page reload or JS
 

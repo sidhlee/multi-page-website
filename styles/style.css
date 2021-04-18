@@ -2,6 +2,7 @@
 /* =========================
  *  Variables & Custom Properties
  * ======================== */
+/*  Breakpoints */
 :root {
   /* Colors */
   --clr-primary: #0e902d;
@@ -884,7 +885,7 @@ img {
 }
 
 .header-home {
-  background: url("./../../images/home-image-1.jpg");
+  background: url("../../images/home-image-1.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -934,7 +935,7 @@ img {
     bottom: calc(-0.1 * var(--size));
     width: var(--size);
     height: var(--size);
-    background-image: url("./../../images/header-box.jpg");
+    background-image: url("../../images/header-box.jpg");
     background-image: cover;
     background-position: center;
   }
@@ -1078,7 +1079,7 @@ img {
   display: block;
   height: 100vw;
   max-height: 500px;
-  background-image: url("./../../images/banner-image.jpg");
+  background-image: url("../../images/banner-image.jpg");
   background-position: 18%;
 }
 
@@ -1157,7 +1158,7 @@ img {
 }
 
 .header-blog .hero {
-  background-image: url("./../../images/blog-header-1.jpg");
+  background-image: url("../../images/blog-header-1.jpg");
 }
 
 /* Blog page layout */
@@ -1374,7 +1375,7 @@ img {
     content: '';
     display: block;
     height: 20rem;
-    background-image: url("./../../images/side-bar-image.jpg");
+    background-image: url("../../images/side-bar-image.jpg");
     background-position: center;
   }
 }
@@ -1424,7 +1425,7 @@ img {
 }
 
 .hero-contact {
-  background-image: url("./../../images/contact-header-1.jpg");
+  background-image: url("../../images/contact-header-1.jpg");
 }
 
 .hero-contact h1 {

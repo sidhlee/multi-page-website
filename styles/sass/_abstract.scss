@@ -2,7 +2,8 @@
  *  Variables & Custom Properties
  * ======================== */
 
-// Breakpoints
+/*  Breakpoints */
+// Using Sas variable because CSS Custom Properties don't work inside media queries.
 $desktop: 1000px;
 $mw: 1600px;
 
@@ -47,21 +48,6 @@ $mw: 1600px;
 /* =========================
  *  Mixins
  * ======================== */
-@mixin text-style(
-	$ff: var(--ff-heading),
-	$fz: 1rem,
-	$fw: regular,
-	$lh: 1.6,
-	$ls: 0px,
-	$color: var(--text-main)
-) {
-	font-family: $ff;
-	font-size: $fz;
-	font-weight: $fw;
-	line-height: $lh;
-	letter-spacing: $ls;
-	color: $color;
-}
 
 @mixin underline-after {
 	&::after {
