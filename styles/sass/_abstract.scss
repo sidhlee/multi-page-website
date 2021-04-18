@@ -97,7 +97,11 @@ $mw: 1600px;
 }
 
 .active {
-	color: var(--clr-accent);
+	// apply to itself and all of its descendants
+	&,
+	& * {
+		color: var(--clr-accent);
+	}
 }
 
 .container {

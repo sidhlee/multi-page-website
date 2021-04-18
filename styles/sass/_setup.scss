@@ -40,7 +40,8 @@ a {
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects;
 	text-decoration: none;
-
+	// to enable height-related rules + transitionY
+	display: inline-block;
 	color: var(--text-inverse);
 }
 
