@@ -22,7 +22,7 @@
   --px-xs: Min(Max(0.5rem, 4vw), 1em);
   --px: Min(Max(1rem, 7vw), 5rem);
   --py: Min(Max(3rem, 10vw), 5rem);
-  --hero-height: Min(Max(15rem, 28vw), 38rem);
+  --hero-height: Min(Max(15rem, 30vw), 35rem);
   --hero-main-height: Min(Max(15rem, 45vw), 40rem);
   --form-border: 1px solid var(--clr-primary);
   --z-menu-btn: 1000;
@@ -670,7 +670,7 @@ img {
  * ======================== */
 .hero {
   height: var(--hero-height);
-  padding: 1rem 4rem;
+  padding-bottom: 1em;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
