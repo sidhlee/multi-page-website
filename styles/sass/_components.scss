@@ -168,5 +168,12 @@
 		color: var(--clr-primary);
 		padding: 1em;
 		font-size: 1.5rem;
+		transition: all 250ms ease;
+
+		&:hover,
+		&:focus {
+			filter: brightness(1.2);
+			transform: scale(1.25);
+		}
 	}
 }
