@@ -3,6 +3,7 @@
 		background-image: url('../../images/blog-header-1.jpg');
 	}
 }
+
 /* Blog page layout */
 .container-blog-page {
 	--blog-main-y-offset: -10rem;
@@ -21,12 +22,14 @@
 			margin-top: var(--blog-main-y-offset);
 			margin-right: calc(-1 * var(--px) + var(--shadow-offset));
 			margin-bottom: 2rem;
+
 			.blog-body,
 			.blog-comments,
 			.form-blog {
 				margin-right: var(--px);
 				padding-left: 1em;
 			}
+
 			.form-blog {
 				.form-inputs {
 					flex-direction: column;
@@ -106,7 +109,9 @@
 	grid-template-columns: minmax(3rem, 4rem) auto;
 	grid-template-rows: auto auto;
 	gap: 1em;
+
 	margin-bottom: 3rem;
+
 	.comment-title {
 		color: var(--text-secondary);
 	}
@@ -115,11 +120,13 @@
 		grid-column: 1 / 2;
 		grid-row: 1 / 2;
 	}
+
 	.comment-title {
 		grid-column: 2 / 3;
 		grid-row: 1 / 2;
 		align-self: end;
 	}
+
 	.comment-body {
 		grid-column: 1 / -1;
 		grid-row: 2 / -1;
@@ -127,16 +134,20 @@
 			margin-top: 0;
 		}
 	}
+
 	@media (min-width: $desktop) {
 		gap: 2em;
+
 		.comment-user-img {
 			grid-row: 1 / -1;
 		}
+
 		.comment-title {
 			grid-column: 2 / 3;
 			grid-row: 1 / 2;
 			align-self: start;
 		}
+
 		.comment-body {
 			position: relative;
 			bottom: 1.5rem;
@@ -160,6 +171,7 @@
 	@media (min-width: $desktop) {
 		margin-top: var(--py);
 		padding-top: 0;
+
 		&::before {
 			position: relative;
 			bottom: 1em;
@@ -177,10 +189,12 @@
 .blog-info-about {
 	margin: 1rem auto 3rem;
 }
+
 .blog-info-recent {
 	.recent-posts {
 		margin-top: 1em;
 		padding-left: 0.5rem;
+
 		li::before {
 			content: '•';
 			padding-right: 1em;

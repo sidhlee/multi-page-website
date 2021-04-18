@@ -1,14 +1,15 @@
 /* Menu Button */
 .menu-btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+
 	position: fixed;
 	top: 0.5em;
 	right: 1em;
 	width: 50px;
 	height: 40px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-end;
 	padding: 0.5em;
 	z-index: var(--z-menu-btn);
 
@@ -43,8 +44,8 @@
 }
 
 .menu-toggler:checked ~ .menu-modal {
-	opacity: 1;
 	z-index: var(--z-menu-modal);
+	opacity: 1;
 	transform: translateY(0%);
 }
 
@@ -69,6 +70,10 @@
 // TODO: how can I disable background scroll without JS
 
 .menu-modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -77,9 +82,6 @@
 	background-color: rgba(255, 255, 255, 0.95);
 	opacity: 0;
 	z-index: -1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	transition: all 250ms ease;
 	transform: translateY(-20%);
 }
@@ -89,7 +91,9 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 	text-align: center;
+
 	.nav-links {
 		display: none;
 		font-family: var(--ff-heading);
@@ -99,30 +103,35 @@
 		@media (min-width: $desktop) {
 			display: flex;
 			width: 20rem;
+
 			li {
 				margin-left: 2.25rem;
 			}
 		}
 	}
-	// on mobile view
+	// Appearing only on mobile - tablet
 	&.nav-modal {
 		.nav-links {
 			display: flex;
 			flex-direction: column;
+
 			li {
 				// use primary color on active link instead of accent color
 				&.active a {
 					color: var(--clr-primary);
 				}
+
 				a {
-					position: relative;
 					display: inline-block;
-					padding: 0.5em;
+					position: relative;
 					margin: 0.5em;
+					padding: 0.5em;
 					font-size: 1.5rem;
 					color: var(--text-main);
 					transition: all 250ms ease;
+
 					@include underline-after;
+					// overriding mixin
 					&::after {
 						background: var(--clr-primary);
 						height: 3px;
@@ -150,9 +159,9 @@
 .btn {
 	display: inline-block;
 	margin-top: 1.5em;
-	border: 2px solid var(--clr-primary);
-	background: var(--clr-primary);
 	padding: 0.5em 1.5em;
+	background: var(--clr-primary);
+	border: 2px solid var(--clr-primary);
 	font-family: var(--ff-heading);
 	font-size: 1rem;
 	font-weight: bold;
@@ -168,14 +177,15 @@
 }
 
 .card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
 	position: relative;
 	width: 100%;
 	// don't grow wider than image width!
 	max-width: 670px;
 	// caused by shadow
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }
 
 .card-img {
@@ -190,20 +200,23 @@
 .feature-item {
 	max-width: 30rem;
 	text-align: center;
+
 	.feature-heading {
 		display: flex;
 		justify-content: center;
+
 		.feature-icon {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
 			--size: 2em;
 			width: var(--size);
 			height: var(--size);
+			margin-right: 0.75rem;
 			background-color: var(--clr-accent);
 			font-size: 1.2rem;
 			border-radius: 50%;
-			margin-right: 0.75rem;
 		}
 	}
 }
@@ -215,10 +228,12 @@
 	.form-inputs {
 		display: flex;
 		flex-direction: column;
+
 		input {
 			display: block;
 			margin-bottom: 2rem;
 		}
+
 		@media (min-width: $desktop) {
 			flex-direction: row;
 			input:first-of-type {
@@ -226,19 +241,21 @@
 			}
 		}
 	}
+
 	input,
 	textarea {
 		display: block;
 		width: 100%;
 		padding: 1em 1.5em;
+		background: transparent;
 		font-family: var(--ff-heading);
 		font-size: 1rem;
 		font-weight: 400;
-		background: transparent;
 	}
+
 	textarea {
-		padding: 2em 1.5em;
 		margin-bottom: 1rem;
+		padding: 2em 1.5em;
 	}
 }
 
@@ -251,12 +268,14 @@
 .socials {
 	display: flex;
 	justify-content: space-between;
+
 	width: 15rem;
 	margin: 0 auto;
+
 	a {
-		color: var(--clr-primary);
 		padding: 0.5rem;
 		font-size: 1.5rem;
+		color: var(--clr-primary);
 		transition: all 250ms ease;
 
 		&:hover,

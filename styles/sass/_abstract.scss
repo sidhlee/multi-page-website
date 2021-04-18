@@ -27,22 +27,24 @@ $mw: 1440px;
 	--ff-heading: 'Josefin Sans';
 
 	/* Spacing */
-	// horizontal padding inside container
+
+	// horizontal paddings inside container
 	--px-xs: Min(Max(0.5rem, 4vw), 1em);
 	--px: Min(Max(1rem, 8vw), 8rem);
 	// vertical padding inside container
 	--py: Min(Max(3rem, 10vw), 5rem);
+	// element-specific
 	--hero-height: Min(Max(15rem, 30vw), 35rem);
 	--hero-main-height: Min(Max(15rem, 45vw), 40rem);
 	--form-border: 1px solid var(--clr-primary);
+	--shadow-offset: 1rem;
 
+	/* Z-Indexes */
 	--z-menu-btn: 1000;
 	--z-menu-modal: 500;
 	--z-shadow: 199;
 	--z-shadow-overlay: 200;
 	--z-card: 300;
-
-	--shadow-offset: 1rem;
 }
 
 /* =========================
@@ -99,22 +101,6 @@ $mw: 1440px;
 	height: 0;
 }
 
-.accent {
-	color: var(--clr-accent);
-}
-
-.bg-secondary {
-	background-color: var(--bg-secondary);
-}
-
-.active {
-	// apply to itself and all of its descendants
-	&,
-	& * {
-		color: var(--clr-accent);
-	}
-}
-
 .container {
 	width: 100%;
 	max-width: $mw;
@@ -129,14 +115,18 @@ $mw: 1440px;
 	margin-right: auto;
 }
 
+// Could not use `box-shadow` because some shadows from the design are shorter than the box that they are coming from.
+// You can control offset length but cannot make the shadow shorter than the element.
 .shadow {
-	// transform: translateY(-5%);
 	position: relative;
+	// give higher z-index to the all children that are siblings to the pseudo-element(shadow)
+	// this will not be applied to the pseudo element because the selectors don't include what's not actually present in DOM
 	& * {
 		position: relative;
 		z-index: var(--z-shadow-overlay);
 	}
 
+	// shadow offset toward bottom right
 	&::after {
 		content: '';
 		display: block;
@@ -150,8 +140,11 @@ $mw: 1440px;
 		z-index: var(--z-shadow);
 	}
 
+	// shadow offset toward bottom left
 	&.shadow-left {
+		// make the "shadow" align with other elements as required by the design
 		transform: translate(1rem, 0);
+
 		&::after {
 			transform: translate(
 				calc(-1 * var(--shadow-offset)),
@@ -163,4 +156,21 @@ $mw: 1440px;
 
 .hero-heading {
 	min-height: 2em;
+}
+
+/* Color-related Utils*/
+.accent {
+	color: var(--clr-accent);
+}
+
+.bg-secondary {
+	background-color: var(--bg-secondary);
+}
+
+.active {
+	// apply to itself and all of its descendants
+	&,
+	& * {
+		color: var(--clr-accent);
+	}
 }

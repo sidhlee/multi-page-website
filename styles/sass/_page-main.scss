@@ -4,18 +4,20 @@
 	background-position: center;
 
 	.hero-main {
-		width: 100%;
-		min-height: var(--hero-main-height);
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		width: 100%;
+		min-height: var(--hero-main-height);
+
 		h1 {
-			// text-align: center;
-			width: min-content;
 			position: relative;
+			width: min-content;
 			// align h1 centered around "planted"
 			left: 5%;
 			animation: fade-in 1s ease forwards;
+
 			span {
 				display: inline-block;
 				opacity: 0;
@@ -44,12 +46,14 @@
 }
 
 .about {
-	min-height: var(--hero-main-height);
-	// give little more attention than other sections by adding more vertical space
-	padding: calc(var(--py) * 1.5) 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	min-height: var(--hero-main-height);
+	// give little more attention than other sections by adding more vertical space
+	padding: calc(var(--py) * 1.5) 0;
+
 	p {
 		max-width: 55rem;
 	}
@@ -57,13 +61,16 @@
 
 .events {
 	overflow-x: hidden;
+
 	.container-events {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
 		// remove horizontal padding set in container class
 		padding: 0;
 	}
+
 	.card {
 		margin-bottom: 2em;
 	}
@@ -78,6 +85,7 @@
 	@media (min-width: $desktop) {
 		// let card image overflow over other sections
 		overflow-x: initial;
+
 		.container-events {
 			flex-direction: row;
 			justify-content: space-between;
@@ -92,9 +100,9 @@
 		--img-offset: 2rem;
 
 		.card:first-of-type {
-			padding-right: 1em;
 			position: relative;
 			bottom: var(--img-offset);
+			padding-right: 1em;
 
 			.card-body {
 				padding-left: var(--px);
@@ -104,15 +112,18 @@
 		}
 
 		.card:last-of-type {
-			padding-left: 1em;
 			position: relative;
 			top: var(--img-offset);
+			padding-left: 1em;
+
 			.card-img {
-				order: 2;
 				// remove horizontal scroll
 				position: relative;
 				right: calc(var(--img-offset) / 2);
+
+				order: 2;
 			}
+
 			.card-body {
 				padding-top: -var(--py);
 				padding-right: var(--px);
@@ -127,11 +138,13 @@
 .features {
 	background: var(--bg-primary);
 	padding: var(--py) 0;
+
 	.container-feature {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
+
 	.feature-item {
 		flex: 1 1 23rem;
 		margin-top: 2rem;
@@ -140,9 +153,11 @@
 	@media (min-width: $desktop) {
 		.feature-item {
 			text-align: left;
+
 			.feature-heading {
 				justify-content: flex-start;
 			}
+
 			p {
 				padding-left: 3.5rem;
 			}
@@ -160,22 +175,24 @@
 		background-position: 18%;
 	}
 	.container-founder {
-		padding-top: var(--py);
-		padding-bottom: var(--py);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		background: var(--bg-primary);
+
 		position: relative;
 		padding-bottom: 3rem;
+		padding-top: var(--py);
+		padding-bottom: var(--py);
+		background: var(--bg-primary);
+
 		.founder-img {
 			$size: 15rem;
 			width: $size;
 			height: $size;
+			// Override inline-style `margin-top: 2rem;` on image-wrappers injected by FireFox (Why???)
+			margin-top: 0 !important;
 			// don't shrink in the flex box
 			flex-shrink: 0;
-			// firefox injects margin-top: 2rem; inline on image-wrappers
-			margin-top: 0 !important;
 		}
 	}
 	h2.heading-lg {
@@ -187,12 +204,15 @@
 		&::before {
 			background-position: center;
 		}
+
 		.container-founder {
 			flex-direction: row;
 		}
+
 		.founder-img {
 			align-self: flex-start;
 		}
+
 		.founder-content {
 			text-align: left;
 			padding-left: var(--px);
@@ -204,11 +224,14 @@
 
 .gallery {
 	padding: var(--py) 0;
+
 	ul {
 		display: flex;
+
 		width: 100%;
 		margin: 0 auto;
 		overflow-x: hidden;
+
 		.gallery-item {
 			// don't shrink and just overflow
 			flex: 1 0 200px;

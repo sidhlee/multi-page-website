@@ -1,9 +1,12 @@
 .container-main {
 	margin-top: 3rem;
+
 	@media (min-width: $desktop) {
 		display: flex;
 		align-items: flex-start;
+
 		margin-top: 0;
+
 		.form-shadow-wrapper {
 			position: relative;
 			bottom: 11rem;
@@ -19,6 +22,7 @@
 
 .hero-contact {
 	background-image: url('../../images/contact-header-1.jpg');
+
 	h1 {
 		width: min-content;
 	}
@@ -36,12 +40,13 @@
 
 .contact {
 	margin-top: 2rem;
-	text-align: center;
 	padding: 3rem 0;
+	text-align: center;
 
 	@media (min-width: $desktop) {
 		.socials {
 			justify-content: flex-start;
+
 			a {
 				font-size: 1.25rem;
 				padding: 0.5em;
@@ -50,6 +55,7 @@
 		.contact-info {
 			padding: 1rem;
 			padding-top: 0;
+
 			.contact-email {
 				margin-top: 0;
 				font-size: 1.1rem;
