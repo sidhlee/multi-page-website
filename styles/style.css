@@ -559,6 +559,10 @@ img {
           flex-direction: column;
 }
 
+.nav.nav-modal .nav-links li.active a {
+  color: var(--clr-primary);
+}
+
 .nav.nav-modal .nav-links li a {
   position: relative;
   display: inline-block;
@@ -593,10 +597,6 @@ img {
 .nav.nav-modal .nav-links li a::after {
   background: var(--clr-primary);
   height: 3px;
-}
-
-.nav.nav-modal .nav-links li a:hover, .nav.nav-modal .nav-links li a:focus {
-  color: var(--clr-primary);
 }
 
 .nav.nav-modal .nav-links li a:hover::after, .nav.nav-modal .nav-links li a:focus::after {

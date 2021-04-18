@@ -110,6 +110,10 @@
 			display: flex;
 			flex-direction: column;
 			li {
+				// use primary color on active link instead of accent color
+				&.active a {
+					color: var(--clr-primary);
+				}
 				a {
 					position: relative;
 					display: inline-block;
@@ -125,7 +129,6 @@
 					}
 					&:hover,
 					&:focus {
-						color: var(--clr-primary);
 						@include underline-after-hover;
 					}
 				}
