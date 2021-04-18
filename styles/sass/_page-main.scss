@@ -15,6 +15,13 @@
 			position: relative;
 			// align h1 centered around "planted"
 			left: 5%;
+			animation: fade-in 1s ease forwards;
+			span {
+				display: inline-block;
+				opacity: 0;
+				animation: fade-in-up 1s ease forwards;
+				animation-delay: 0.5s;
+			}
 		}
 	}
 
