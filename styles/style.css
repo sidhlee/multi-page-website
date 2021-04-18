@@ -390,6 +390,7 @@ img {
      object-fit: cover;
 }
 
+/* Menu Button */
 .menu-btn {
   position: fixed;
   top: 0.5em;
@@ -435,6 +436,8 @@ img {
   background-color: var(--text-inverse);
   -webkit-box-shadow: 1px 1px 0 1.5px black;
           box-shadow: 1px 1px 0 1.5px black;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 @media (min-width: 1000px) {
@@ -443,11 +446,32 @@ img {
   }
 }
 
-.menu-toggler:checked + .menu-modal {
+.menu-toggler:checked ~ .menu-modal {
   opacity: 1;
   z-index: var(--z-menu-modal);
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+}
+
+/* Menu Button Animation */
+.menu-toggler:checked ~ .menu-btn::before,
+.menu-toggler:checked ~ .menu-btn span {
+  background-color: var(--text-main);
+}
+
+.menu-toggler:checked ~ .menu-btn::before {
+  -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+          transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+.menu-toggler:checked ~ .menu-btn span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 100%;
+}
+
+.menu-toggler:checked ~ .menu-btn::after {
+  opacity: 0;
 }
 
 .menu-modal {
@@ -468,8 +492,8 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
   -webkit-transform: translateY(-20%);
           transform: translateY(-20%);
 }
