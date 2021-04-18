@@ -53,7 +53,7 @@ When I click on the About link, the following result is logged into the console:
 
 ```text
 click
-<a href=​"#about/​">​About​</a>​
+<a href=​"#about​">​About​</a>​
 true
 ```
 

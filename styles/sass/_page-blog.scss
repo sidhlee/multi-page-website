@@ -1,6 +1,6 @@
 .header-blog {
 	.hero {
-		background-image: url('./../../images/blog-header-1.jpg');
+		background-image: url('../../images/blog-header-1.jpg');
 	}
 }
 /* Blog page layout */
@@ -168,7 +168,7 @@
 			content: '';
 			display: block;
 			height: 20rem;
-			background-image: url('./../../images/side-bar-image.jpg');
+			background-image: url('../../images/side-bar-image.jpg');
 			background-position: center;
 		}
 	}

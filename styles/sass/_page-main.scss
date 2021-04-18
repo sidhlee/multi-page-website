@@ -1,5 +1,5 @@
 .header-home {
-	background: url('./../../images/home-image-1.jpg');
+	background: url('../../images/home-image-1.jpg');
 	background-size: cover;
 	background-position: center;
 
@@ -36,7 +36,7 @@
 			bottom: calc(-0.1 * var(--size));
 			width: var(--size);
 			height: var(--size);
-			background-image: url('./../../images/header-box.jpg');
+			background-image: url('../../images/header-box.jpg');
 			background-image: cover;
 			background-position: center;
 		}
@@ -156,7 +156,7 @@
 		display: block;
 		height: 100vw;
 		max-height: 500px;
-		background-image: url('./../../images/banner-image.jpg');
+		background-image: url('../../images/banner-image.jpg');
 		background-position: 18%;
 	}
 	.container-founder {
