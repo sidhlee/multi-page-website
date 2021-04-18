@@ -247,11 +247,12 @@
 
 .socials {
 	display: flex;
-	justify-content: center;
-	width: 100%;
+	justify-content: space-between;
+	width: 15rem;
+	margin: 0 auto;
 	a {
 		color: var(--clr-primary);
-		padding: 1em;
+		padding: 0.5rem;
 		font-size: 1.5rem;
 		transition: all 250ms ease;
 

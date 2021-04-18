@@ -1,16 +1,18 @@
 .container-main {
+	margin-top: 3rem;
 	@media (min-width: $desktop) {
 		display: flex;
 		align-items: flex-start;
+		margin-top: 0;
 		.form-shadow-wrapper {
 			position: relative;
-			bottom: 10rem;
+			bottom: 11rem;
 			flex-grow: 1;
 		}
 
 		.contact {
 			order: -1;
-			margin-right: 3rem;
+			margin-right: 2rem;
 		}
 	}
 }
@@ -36,9 +38,7 @@
 	margin-top: 2rem;
 	text-align: center;
 	padding: 3rem 0;
-	.socials {
-		justify-content: center;
-	}
+
 	@media (min-width: $desktop) {
 		.socials {
 			justify-content: flex-start;
@@ -49,8 +49,11 @@
 		}
 		.contact-info {
 			padding: 1rem;
+			padding-top: 0;
 			.contact-email {
 				margin-top: 0;
+				font-size: 1.1rem;
+				letter-spacing: 1px;
 			}
 		}
 		text-align: left;

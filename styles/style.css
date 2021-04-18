@@ -20,7 +20,7 @@
   --ff-heading: 'Josefin Sans';
   /* Spacing */
   --px-xs: Min(Max(0.5rem, 4vw), 1em);
-  --px: Min(Max(1rem, 7vw), 5rem);
+  --px: Min(Max(1rem, 8vw), 8rem);
   --py: Min(Max(3rem, 10vw), 5rem);
   --hero-height: Min(Max(15rem, 30vw), 35rem);
   --hero-main-height: Min(Max(15rem, 45vw), 40rem);
@@ -759,15 +759,16 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 15rem;
+  margin: 0 auto;
 }
 
 .socials a {
   color: var(--clr-primary);
-  padding: 1em;
+  padding: 0.5rem;
   font-size: 1.5rem;
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
@@ -798,7 +799,7 @@ img {
  *  Navigation
  * ======================== */
 .navbar {
-  padding: 1rem 1em 0.25rem;
+  padding: 1rem 0 0.25rem;
 }
 
 .navbar .container {
@@ -1393,6 +1394,10 @@ img {
   color: var(--clr-primary);
 }
 
+.container-main {
+  margin-top: 3rem;
+}
+
 @media (min-width: 1000px) {
   .container-main {
     display: -webkit-box;
@@ -1401,10 +1406,11 @@ img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    margin-top: 0;
   }
   .container-main .form-shadow-wrapper {
     position: relative;
-    bottom: 10rem;
+    bottom: 11rem;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -1413,7 +1419,7 @@ img {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-    margin-right: 3rem;
+    margin-right: 2rem;
   }
 }
 
@@ -1442,12 +1448,6 @@ img {
   padding: 3rem 0;
 }
 
-.contact .socials {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 @media (min-width: 1000px) {
   .contact {
     text-align: left;
@@ -1463,9 +1463,12 @@ img {
   }
   .contact .contact-info {
     padding: 1rem;
+    padding-top: 0;
   }
   .contact .contact-info .contact-email {
     margin-top: 0;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
   }
 }
 
