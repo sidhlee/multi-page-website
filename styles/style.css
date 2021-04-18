@@ -625,8 +625,10 @@ img {
   border: 2px solid var(--clr-primary);
   background: var(--clr-primary);
   padding: 0.5em 1.5em;
+  font-family: var(--ff-heading);
   font-size: 1rem;
   font-weight: bold;
+  letter-spacing: 1px;
   color: var(--text-inverse);
 }
 
@@ -692,7 +694,7 @@ img {
   background-color: var(--clr-accent);
   font-size: 1.2rem;
   border-radius: 50%;
-  margin-right: 1rem;
+  margin-right: 0.75rem;
 }
 
 .form {
