@@ -27,7 +27,7 @@
 		<nav class="nav nav-modal">
 			<ul class="nav-links">
 				<li class="active"><a href="/">Home</a></li>
-				<li><a href="/#about">About</a></li>
+				<li><a href="#about/">About</a></li>
 				<li><a href="/blog.html">Blog</a></li>
 				<li><a href="/contact.html">Contact</a></li>
 			</ul>
@@ -213,12 +213,33 @@
 		<footer class="footer">Copyright &copy; 2018 HackerYou</footer>
 	</div>
 
-
+	<!-- Script: CDN -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
 		integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
 		crossorigin="anonymous"></script>
+
+	<!-- Script-->
 	<script>
 		AOS.init();
+
+		const aboutLink = document.querySelector('.nav-modal > ul > li:nth-of-type(2)');
+		const toggler = document.querySelector('.menu-toggler');
+
+		aboutLink.addEventListener('click', uncheckToggler);
+
+		function uncheckToggler() {
+			toggler.click();
+		}
+
+		// Trying to find out why clicking on link doesn't toggle the checkbox
+		// const menuModal = document.querySelector('.menu-modal')
+		// menuModal.addEventListener('click', (e) => {
+		// 	console.log('click')
+		// 	console.log(e.target)
+		// 	console.log(toggler.checked)
+		// })
+
+
 	</script>
 </body>
 
