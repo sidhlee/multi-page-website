@@ -15,6 +15,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
 		integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
 		crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+		integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+		crossorigin="anonymous" />
 </head>
 
 <body>
@@ -53,7 +56,8 @@
 		</header>
 
 		<main>
-			<section id="about" class="about center">
+			<!-- About section -->
+			<section id="about" class="about center" data-aos="fade-up" data-aos-once="true">
 				<div class="container">
 					<h2 class="heading-whatis ">What is Planted?</h2>
 					<p class="center">
@@ -69,9 +73,11 @@
 				</div>
 			</section>
 
+			<!-- Events (Cards) section -->
 			<section class="events bg-secondary">
 				<div class="container container-events">
-					<div class="card">
+
+					<div class="card" data-aos="fade-right" data-aos-once="true">
 						<div class="card-img shadow">
 							<img src="./images/left-flowers.jpg" alt="" />
 						</div>
@@ -87,7 +93,8 @@
 							<a href="#" class="btn">Read more</a>
 						</div>
 					</div>
-					<div class="card">
+
+					<div class="card" data-aos="fade-left" data-aos-once="true">
 						<div class="card-img shadow shadow-left">
 							<img src="./images/right-flowers.jpg" alt="" />
 						</div>
@@ -108,7 +115,7 @@
 
 			<section class="features bg-secondary">
 				<ul class="container container-feature">
-					<li class="feature-item">
+					<li class="feature-item" data-aos="fade-up" data-aos-once="true">
 						<div class="feature-heading">
 							<span class="feature-icon"><i class="fas fa-leaf"></i></span>
 							<h2>Green houses</h2>
@@ -121,7 +128,7 @@
 							necessitatibus omnis nulla!
 						</p>
 					</li>
-					<li class="feature-item">
+					<li class="feature-item" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">
 						<div class="feature-heading">
 							<span class="feature-icon"><i class="fas fa-users"></i></span>
 							<h2>Community</h2>
@@ -134,7 +141,7 @@
 							necessitatibus omnis nulla!
 						</p>
 					</li>
-					<li class="feature-item">
+					<li class="feature-item" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
 						<div class="feature-heading">
 							<span class="feature-icon"><i class="fas fa-file"></i></span>
 							<h2>Blog</h2>
@@ -147,7 +154,7 @@
 							necessitatibus omnis nulla!
 						</p>
 					</li>
-					<li class="feature-item">
+					<li class="feature-item" data-aos="fade-up" data-aos-once="true" data-aos-delay="300">
 						<div class="feature-heading">
 							<span class="feature-icon"><i class="fas fa-phone"></i></span>
 							<h2>Get in Touch</h2>
@@ -165,10 +172,11 @@
 
 			<section class="founder">
 				<div class="container container-founder">
-					<div class="founder-img shadow">
+					<div class="founder-img shadow" data-aos="fade-up" data-aos-anchor-placement="center center"
+						data-aos-once="true">
 						<img src="./images/founder.jpg" alt="" />
 					</div>
-					<div class="card-body founder-content">
+					<div class="card-body founder-content" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
 						<h2 class="heading-lg">Planted's founder</h2>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing
@@ -206,6 +214,12 @@
 	</div>
 
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+		integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+		crossorigin="anonymous"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 
 </html>
