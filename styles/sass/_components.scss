@@ -214,7 +214,7 @@
 		flex-direction: column;
 		input {
 			display: block;
-			margin-bottom: 1em;
+			margin-bottom: 2rem;
 		}
 		@media (min-width: $desktop) {
 			flex-direction: row;
@@ -235,6 +235,7 @@
 	}
 	textarea {
 		padding: 2em 1.5em;
+		margin-bottom: 1rem;
 	}
 }
 

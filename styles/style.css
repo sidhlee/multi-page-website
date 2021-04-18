@@ -227,7 +227,6 @@ p {
   font-family: var(--ff-heading);
   font-size: 1rem;
   font-weight: bold;
-  color: var(--text-secondary);
 }
 
 .form-label {
@@ -719,7 +718,7 @@ img {
 
 .form .form-inputs input {
   display: block;
-  margin-bottom: 1em;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 1000px) {
@@ -747,6 +746,7 @@ img {
 
 .form textarea {
   padding: 2em 1.5em;
+  margin-bottom: 1rem;
 }
 
 .find-more {
@@ -1161,7 +1161,7 @@ img {
 
 /* Blog page layout */
 .container-blog-page {
-  --blog-main-y-offset: -8rem;
+  --blog-main-y-offset: -10rem;
   display: -ms-grid;
   display: grid;
 }
@@ -1172,7 +1172,7 @@ img {
         grid-template-columns: 20rem 2fr;
     -ms-grid-rows: auto 1fr;
         grid-template-rows: auto 1fr;
-    gap: Min(Max(1em, 4vw), 2em);
+    gap: Min(Max(1em, 5vw), 3em);
   }
   .container-blog-page main {
     -ms-grid-column: 2;
@@ -1220,6 +1220,7 @@ img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+    padding: 2em var(--px-xs);
   }
 }
 
@@ -1252,6 +1253,10 @@ img {
   color: var(--text-secondary);
 }
 
+.blog-inner .blog-body .blog-header .blog-meta .meta-by {
+  font-weight: bold;
+}
+
 .blog-inner .blog-comments-title {
   margin: 1em 0;
 }
@@ -1262,8 +1267,12 @@ img {
 }
 
 .blog-comments {
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding-left: 1em;
+}
+
+.blog-comments-title {
+  margin-bottom: 1em;
 }
 
 .blog-comment {
@@ -1275,6 +1284,10 @@ img {
       grid-template-rows: auto auto;
   gap: 1em;
   margin-bottom: 3rem;
+}
+
+.blog-comment .comment-title {
+  color: var(--text-secondary);
 }
 
 .blog-comment .comment-user-img {
@@ -1307,8 +1320,39 @@ img {
   margin-top: 0;
 }
 
+@media (min-width: 1000px) {
+  .blog-comment {
+    gap: 2em;
+  }
+  .blog-comment .comment-user-img {
+    grid-row: 1 / -1;
+  }
+  .blog-comment .comment-title {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  .blog-comment .comment-body {
+    position: relative;
+    bottom: 1.5rem;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    grid-row: 2 / -1;
+  }
+  .blog-comment .comment-body p {
+    margin-top: 0;
+  }
+}
+
 .blog-info {
-  padding: 2em var(--px-xs);
+  padding: 2em var(--px);
   margin-bottom: 2rem;
 }
 
@@ -1335,7 +1379,7 @@ img {
 }
 
 .blog-info-about {
-  margin-bottom: 3rem;
+  margin: 1rem auto 3rem;
 }
 
 .blog-info-recent .recent-posts {
