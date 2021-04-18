@@ -9,52 +9,6 @@
  *  Navigation
  * ======================== */
 
-.nav {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	.nav-links {
-		display: none;
-		font-family: var(--ff-heading);
-		text-transform: uppercase;
-		letter-spacing: 0.1rem;
-
-		@media (min-width: $desktop) {
-			display: flex;
-			width: 20rem;
-			li {
-				margin-left: 2.25rem;
-			}
-		}
-	}
-	// on mobile view
-	&.nav-modal {
-		.nav-links {
-			display: flex;
-			flex-direction: column;
-			li {
-				a {
-					display: inline-block;
-					padding: 1em;
-					font-size: 1.5rem;
-					color: var(--text-main);
-				}
-			}
-			@media (min-width: $desktop) {
-				display: none;
-			}
-		}
-	}
-}
-
-.logo {
-	color: var(--text-inverse);
-	font-size: Min(Max(1.5rem, 4vw), 2.24rem);
-	font-family: var(--ff-heading);
-	line-height: 1;
-}
-
 .navbar {
 	padding: 1rem 1em 0.25rem;
 
@@ -75,29 +29,13 @@
 /* Hover Animation */
 .navbar .nav-links > li {
 	position: relative;
-	&::after {
-		content: '';
-		display: block;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		background: var(--text-inverse);
-		width: 100%;
-		height: 1px;
-		transform: scaleX(0);
-		transform-origin: left;
-		opacity: 0;
-		transition: transform 200ms ease;
-	}
+	@include underline-after;
 
 	&:not(.active):hover,
 	// Used focus-within on li for catching tab focus on anchor tag
 	// If you used :focus, li is not able to catch anchor tag focused by tabbing.
 	&:not(.active):focus-within {
-		&::after {
-			transform: scaleX(1);
-			opacity: 1;
-		}
+		@include underline-after-hover;
 		a {
 			animation: fade-in-up 0.8s ease forwards;
 		}
