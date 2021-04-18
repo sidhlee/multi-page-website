@@ -65,11 +65,19 @@
 .btn {
 	display: inline-block;
 	margin-top: 1.5em;
+	border: 2px solid var(--clr-primary);
 	background: var(--clr-primary);
 	padding: 0.5em 1.5em;
 	font-size: 1rem;
 	font-weight: bold;
 	color: var(--text-inverse);
+
+	&:hover,
+	&:focus {
+		transition: all 200ms ease;
+		background: var(--text-inverse);
+		color: var(--clr-primary);
+	}
 }
 
 .card {

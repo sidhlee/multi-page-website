@@ -36,6 +36,11 @@ figure {
 	margin: 1em 40px;
 }
 
+a,
+button {
+	cursor: pointer;
+}
+
 a {
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects;
