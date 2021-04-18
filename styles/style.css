@@ -575,7 +575,8 @@ img {
 
 .socials a {
   color: var(--clr-primary);
-  padding: 2em;
+  padding: 1em;
+  font-size: 1.5rem;
 }
 
 /* =========================
@@ -1215,7 +1216,8 @@ img {
             justify-content: flex-start;
   }
   .contact .socials a {
-    padding: 1em;
+    font-size: 1.25rem;
+    padding: 0.5em;
   }
   .contact .contact-info {
     padding: 1rem;
