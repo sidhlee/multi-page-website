@@ -13,6 +13,7 @@
 	padding: 0.5em;
 	z-index: var(--z-menu-btn);
 
+	// creating 3 bars inside hamburger button
 	span {
 		width: 80%;
 	}
@@ -43,32 +44,7 @@
 	}
 }
 
-.menu-toggler:checked ~ .menu-modal {
-	z-index: var(--z-menu-modal);
-	opacity: 1;
-	transform: translateY(0%);
-}
-
-/* Menu Button Animation */
-.menu-toggler:checked ~ .menu-btn {
-	&::before,
-	span {
-		background-color: var(--text-main);
-	}
-	&::before {
-		transform: rotate(-45deg) translate(-8px, 7px);
-	}
-	span {
-		transform: rotate(45deg);
-		width: 100%;
-	}
-	&::after {
-		opacity: 0;
-	}
-}
-
-// TODO: how can I disable background scroll without JS
-
+// menu that spans entire screen
 .menu-modal {
 	display: flex;
 	justify-content: center;
@@ -84,6 +60,31 @@
 	z-index: -1;
 	transition: all 250ms ease;
 	transform: translateY(-20%);
+}
+
+// Show menu modal when the user clicks on the label and make the input checked.
+.menu-toggler:checked ~ .menu-modal {
+	z-index: var(--z-menu-modal);
+	opacity: 1;
+	transform: translateY(0%);
+}
+
+// Add animation to the toggle button when the input is checked
+.menu-toggler:checked ~ .menu-btn {
+	&::before,
+	span {
+		background-color: var(--text-main);
+	}
+	&::before {
+		transform: rotate(-45deg) translate(-8px, 7px);
+	}
+	span {
+		transform: rotate(45deg);
+		width: 100%;
+	}
+	&::after {
+		opacity: 0;
+	}
 }
 
 /* Navigation Links */

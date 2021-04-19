@@ -30,6 +30,8 @@ Additionally, you will be given a general mark on how well you adhere to best pr
 
 ## Technical Wins
 
+### Toggling Menu Modal with Checkbox and Label
+
 ### Fluid layout with VW and CSS Math Functions
 
 I used viewport width unit on font-size and spacing to make them stretch and shrink based on the viewport width. This eliminates the need of having many media queries where we usually define different font sizes and padding & margin values to fit the current viewport.
@@ -78,6 +80,10 @@ function uncheckToggler() {
 	toggler.click();
 }
 ```
+
+### Disabling scrolling when the modal is opened
+
+Could not find a way to implement this without JS
 
 ## References
 
