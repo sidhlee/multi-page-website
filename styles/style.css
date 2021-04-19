@@ -129,6 +129,12 @@
   color: var(--clr-accent);
 }
 
+.find-more {
+  font-style: italic;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
 @-webkit-keyframes fade-in-up {
   0% {
     opacity: 0;
@@ -749,12 +755,6 @@ img {
 .form textarea {
   margin-bottom: 1rem;
   padding: 2em 1.5em;
-}
-
-.find-more {
-  font-style: italic;
-  font-weight: bold;
-  color: var(--text-secondary);
 }
 
 .socials {
