@@ -110,43 +110,42 @@
 			}
 		}
 	}
-	// Appearing only on mobile - tablet
-	&.nav-modal {
-		.nav-links {
-			display: flex;
-			flex-direction: column;
+}
 
-			li {
-				// use primary color on active link instead of accent color
-				&.active a {
-					color: var(--clr-primary);
-				}
+// Appearing only on mobile & tablet
+.nav-modal .nav-links {
+	display: flex;
+	flex-direction: column;
 
-				a {
-					display: inline-block;
-					position: relative;
-					margin: 0.5em;
-					padding: 0.5em;
-					font-size: 1.5rem;
-					color: var(--text-main);
-					transition: all 250ms ease;
+	li {
+		// use primary color on active link instead of accent color
+		&.active a {
+			color: var(--clr-primary);
+		}
 
-					@include underline-after;
-					// overriding mixin
-					&::after {
-						background: var(--clr-primary);
-						height: 3px;
-					}
-					&:hover,
-					&:focus {
-						@include underline-after-hover;
-					}
-				}
+		a {
+			display: inline-block;
+			position: relative;
+			margin: 0.5em;
+			padding: 0.5em;
+			font-size: 1.5rem;
+			color: var(--text-main);
+			transition: all 250ms ease;
+
+			@include underline-after;
+			// overriding mixin
+			&::after {
+				background: var(--clr-primary);
+				height: 3px;
 			}
-			@media (min-width: $desktop) {
-				display: none;
+			&:hover,
+			&:focus {
+				@include underline-after-hover;
 			}
 		}
+	}
+	@media (min-width: $desktop) {
+		display: none;
 	}
 }
 
