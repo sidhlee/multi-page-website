@@ -118,7 +118,7 @@
 	flex-direction: column;
 
 	li {
-		// use primary color on active link instead of accent color
+		// use primary color instead of accent color on active link
 		&.active a {
 			color: var(--clr-primary);
 		}
