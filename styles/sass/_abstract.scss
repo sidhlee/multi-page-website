@@ -173,10 +173,8 @@ $mw: 1440px;
 
 .active {
 	// apply to itself and all of its descendants
-	&,
-	& * {
-		color: var(--clr-accent);
-	}
+
+	color: var(--clr-accent);
 }
 
 .find-more {
