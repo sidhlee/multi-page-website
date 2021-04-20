@@ -73,13 +73,6 @@ $mw: 1440px;
 	}
 }
 
-@mixin underline-after-hover {
-	&::after {
-		transform: scaleX(1);
-		opacity: 1;
-	}
-}
-
 @mixin fade-in-up {
 	animation: fade-in-up 0.8s ease forwards;
 }

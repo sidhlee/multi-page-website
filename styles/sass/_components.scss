@@ -87,31 +87,6 @@
 	}
 }
 
-/* Navigation Links */
-.nav {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	text-align: center;
-
-	.nav-links {
-		display: none;
-		font-family: var(--ff-heading);
-		text-transform: uppercase;
-		letter-spacing: 0.1rem;
-
-		@media (min-width: $desktop) {
-			display: flex;
-			width: 20rem;
-
-			li {
-				margin-left: 2.25rem;
-			}
-		}
-	}
-}
-
 .logo {
 	color: var(--text-inverse);
 	font-size: Min(Max(1.5rem, 4vw), 2.24rem);
@@ -129,12 +104,13 @@
 	font-size: 1rem;
 	font-weight: bold;
 	letter-spacing: 1px;
+	text-transform: capitalize;
 	color: var(--text-inverse);
 
 	&:hover,
 	&:focus {
 		transition: all 200ms ease;
-		background: var(--text-inverse);
+		background: transparent;
 		color: var(--clr-primary);
 	}
 }

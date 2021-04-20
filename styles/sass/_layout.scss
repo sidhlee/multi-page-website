@@ -10,8 +10,50 @@
  *  Navigation
  * ======================== */
 
+/* Navigation Links  */
+.nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	text-align: center;
+}
+
+// enable transform on span inside link
+.link-text {
+	display: inline-block;
+}
+
+// general style for both navbar and nav-modal
+.nav-links {
+	display: none;
+	font-family: var(--ff-heading);
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	li {
+		position: relative;
+		a:not(.active) {
+			@include underline-after;
+		}
+	}
+
+	@media (min-width: $desktop) {
+		display: flex;
+		width: 20rem;
+
+		li {
+			margin-left: 2.25rem;
+		}
+	}
+}
+
+// navbar-specific styles
 .navbar {
 	padding: 1rem 0 0.25rem;
+	// dark variation
+	&.navbar-bg {
+		background: var(--clr-navbar);
+	}
 
 	.container {
 		display: flex;
@@ -20,46 +62,19 @@
 
 	.nav-links {
 		font-size: 1rem;
+		// only apply hover animation on links that are not active
+		a:not(.active):hover .link-text {
+			@include fade-in-up;
+		}
 	}
 }
 
-.navbar.navbar-bg {
-	background: var(--clr-navbar);
-}
-
-.link-text {
-	display: inline-block;
-}
-
-.nav-links > li {
-	position: relative;
-	a:not(.active) {
-		@include underline-after;
-	}
-}
-
-.navbar .nav-links > li {
-	a:not(.active):hover .link-text {
-		@include fade-in-up;
-	}
-	// &:hover,
-	// // Used focus-within on li for catching tab focus on anchor tag
-	// // If you used :focus, li is not able to catch anchor tag focused by tabbing.
-	// &:focus-within {
-	// 	// @include underline-after-hover;
-	// 	a:not(.active) {
-	// 		@include underline-after;
-	// 		// animation: fade-in-up 0.8s ease forwards;
-	// 	}
-	// }
-}
-
-// Appearing only on mobile & tablet
+// only applies to links inside modal
 .nav-modal .nav-links {
 	display: flex;
 	flex-direction: column;
 
-	li a {
+	a {
 		display: inline-block;
 		position: relative;
 		margin: 0.5em;
@@ -68,9 +83,9 @@
 		color: var(--text-main);
 		transition: all 250ms ease;
 
-		&:not(.active) {
-			@include underline-after;
-		}
+		// &:not(.active) {
+		// 	@include underline-after;
+		// }
 
 		// overriding mixin - need :not(.active) for specificity to be able to override
 		&:not(.active)::after {
