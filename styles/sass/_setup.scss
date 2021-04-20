@@ -88,6 +88,11 @@ input {
 	overflow: visible;
 }
 
+input,
+textarea {
+	background: transparent;
+}
+
 input {
 	border: 0;
 	border-bottom: var(--form-border);

@@ -53,9 +53,7 @@
 .blog {
 	margin-bottom: 2rem;
 	background: var(--bg-primary);
-}
 
-.blog-inner {
 	.blog-img {
 		transform: translate(
 			var(--shadow-offset),
@@ -84,24 +82,15 @@
 			}
 		}
 	}
-
-	.blog-comments-title {
-		margin: 1em 0;
-	}
-
-	input,
-	textarea {
-		background: var(--bg-primary);
-	}
 }
 
 .blog-comments {
 	margin-top: 1rem;
 	padding-left: 1em;
-}
 
-.blog-comments-title {
-	margin-bottom: 1em;
+	.blog-comments-title {
+		margin: 1em 0;
+	}
 }
 
 .blog-comment {
@@ -172,13 +161,14 @@
 		margin-top: var(--py);
 		padding-top: 0;
 
+		// decorating image between sections
 		&::before {
+			content: '';
+			display: block;
 			position: relative;
 			bottom: 1em;
 			right: 7rem;
 			width: 140%;
-			content: '';
-			display: block;
 			height: 20rem;
 			background-image: url('../../images/side-bar-image.jpg');
 			background-position: center;

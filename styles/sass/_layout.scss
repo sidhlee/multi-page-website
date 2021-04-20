@@ -83,10 +83,6 @@
 		color: var(--text-main);
 		transition: all 250ms ease;
 
-		// &:not(.active) {
-		// 	@include underline-after;
-		// }
-
 		// overriding mixin - need :not(.active) for specificity to be able to override
 		&:not(.active)::after {
 			background: var(--clr-primary);

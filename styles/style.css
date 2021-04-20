@@ -335,6 +335,11 @@ input {
   overflow: visible;
 }
 
+input,
+textarea {
+  background: transparent;
+}
+
 input {
   border: 0;
   border-bottom: var(--form-border);
@@ -1210,12 +1215,12 @@ img {
   background: var(--bg-primary);
 }
 
-.blog-inner .blog-img {
+.blog .blog-img {
   -webkit-transform: translate(var(--shadow-offset), calc(-1 * var(--shadow-offset)));
           transform: translate(var(--shadow-offset), calc(-1 * var(--shadow-offset)));
 }
 
-.blog-inner .blog-body {
+.blog .blog-body {
   padding-top: 2em;
   padding-bottom: 2em;
   padding-left: 1em;
@@ -1223,28 +1228,19 @@ img {
   border-bottom: 0.25rem solid var(--clr-accent);
 }
 
-.blog-inner .blog-body .blog-header {
+.blog .blog-body .blog-header {
   margin: 0 0 2em;
   text-align: left;
 }
 
-.blog-inner .blog-body .blog-header .blog-meta {
+.blog .blog-body .blog-header .blog-meta {
   margin-top: 0;
   font-style: italic;
   color: var(--text-secondary);
 }
 
-.blog-inner .blog-body .blog-header .blog-meta .meta-by {
+.blog .blog-body .blog-header .blog-meta .meta-by {
   font-weight: bold;
-}
-
-.blog-inner .blog-comments-title {
-  margin: 1em 0;
-}
-
-.blog-inner input,
-.blog-inner textarea {
-  background: var(--bg-primary);
 }
 
 .blog-comments {
@@ -1252,8 +1248,8 @@ img {
   padding-left: 1em;
 }
 
-.blog-comments-title {
-  margin-bottom: 1em;
+.blog-comments .blog-comments-title {
+  margin: 1em 0;
 }
 
 .blog-comment {
@@ -1347,12 +1343,12 @@ img {
     padding-top: 0;
   }
   .blog-info::before {
+    content: '';
+    display: block;
     position: relative;
     bottom: 1em;
     right: 7rem;
     width: 140%;
-    content: '';
-    display: block;
     height: 20rem;
     background-image: url("../../images/side-bar-image.jpg");
     background-position: center;
@@ -1428,6 +1424,15 @@ img {
   text-align: center;
 }
 
+.contact .contact-email {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.contact .address p {
+  margin-top: 0.5em;
+}
+
 @media (min-width: 1000px) {
   .contact {
     text-align: left;
@@ -1450,13 +1455,4 @@ img {
     font-size: 1.1rem;
     letter-spacing: 1px;
   }
-}
-
-.contact-email {
-  display: inline-block;
-  margin-top: 1em;
-}
-
-.address p {
-  margin-top: 0.5em;
 }

@@ -43,7 +43,20 @@
 	padding: 3rem 0;
 	text-align: center;
 
+	.contact-email {
+		display: inline-block;
+		margin-top: 1em;
+	}
+
+	.address {
+		p {
+			margin-top: 0.5em;
+		}
+	}
+
 	@media (min-width: $desktop) {
+		text-align: left;
+
 		.socials {
 			justify-content: flex-start;
 
@@ -52,6 +65,7 @@
 				padding: 0.5em;
 			}
 		}
+
 		.contact-info {
 			padding: 1rem;
 			padding-top: 0;
@@ -62,17 +76,5 @@
 				letter-spacing: 1px;
 			}
 		}
-		text-align: left;
-	}
-}
-
-.contact-email {
-	display: inline-block;
-	margin-top: 1em;
-}
-
-.address {
-	p {
-		margin-top: 0.5em;
 	}
 }
