@@ -102,8 +102,8 @@
 }
 
 .shadow.shadow-left {
-  -webkit-transform: translate(1rem, 0);
-          transform: translate(1rem, 0);
+  -webkit-transform: translate(var(--shadow-offset), 0);
+          transform: translate(var(--shadow-offset), 0);
 }
 
 .shadow.shadow-left::after {

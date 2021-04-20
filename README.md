@@ -30,7 +30,14 @@ Additionally, you will be given a general mark on how well you adhere to best pr
 
 ## Technical Wins
 
-### Toggling Menu Modal with Checkbox and Label
+### UI Animations & Transitions
+
+-   Main h1 heading
+-   Navigation links
+-   Hamburger icon
+-   Menu modal
+-   Social Icons
+-   Scroll animation with AOS library
 
 ### Fluid layout with VW and CSS Math Functions
 

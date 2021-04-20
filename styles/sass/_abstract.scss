@@ -142,8 +142,10 @@ $mw: 1440px;
 
 	// shadow offset toward bottom left
 	&.shadow-left {
-		// make the "shadow" align with other elements as required by the design
-		transform: translate(1rem, 0);
+		// Move the whole box to the right to make room for shadow.
+		// Shadow will be aligned to where the box used to be
+		// (Otherwise the shadow can overflow the parent that has 0 padding.)
+		transform: translate(var(--shadow-offset), 0);
 
 		&::after {
 			transform: translate(
