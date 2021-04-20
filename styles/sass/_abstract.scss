@@ -66,6 +66,11 @@ $mw: 1440px;
 		opacity: 0;
 		transition: transform 200ms ease;
 	}
+
+	&:hover::after {
+		transform: scaleX(1);
+		opacity: 1;
+	}
 }
 
 @mixin underline-after-hover {
@@ -73,6 +78,10 @@ $mw: 1440px;
 		transform: scaleX(1);
 		opacity: 1;
 	}
+}
+
+@mixin fade-in-up {
+	animation: fade-in-up 0.8s ease forwards;
 }
 
 /* =========================

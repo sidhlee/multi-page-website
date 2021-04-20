@@ -27,19 +27,66 @@
 	background: var(--clr-navbar);
 }
 
-/* Hover Animation */
-.navbar .nav-links > li {
-	position: relative;
-	@include underline-after;
+.link-text {
+	display: inline-block;
+}
 
-	&:not(.active):hover,
-	// Used focus-within on li for catching tab focus on anchor tag
-	// If you used :focus, li is not able to catch anchor tag focused by tabbing.
-	&:not(.active):focus-within {
-		@include underline-after-hover;
-		a {
-			animation: fade-in-up 0.8s ease forwards;
+.nav-links > li {
+	position: relative;
+	a:not(.active) {
+		@include underline-after;
+	}
+}
+
+.navbar .nav-links > li {
+	a:not(.active):hover .link-text {
+		@include fade-in-up;
+	}
+	// &:hover,
+	// // Used focus-within on li for catching tab focus on anchor tag
+	// // If you used :focus, li is not able to catch anchor tag focused by tabbing.
+	// &:focus-within {
+	// 	// @include underline-after-hover;
+	// 	a:not(.active) {
+	// 		@include underline-after;
+	// 		// animation: fade-in-up 0.8s ease forwards;
+	// 	}
+	// }
+}
+
+// Appearing only on mobile & tablet
+.nav-modal .nav-links {
+	display: flex;
+	flex-direction: column;
+
+	li a {
+		display: inline-block;
+		position: relative;
+		margin: 0.5em;
+		padding: 0.5em;
+		font-size: 1.5rem;
+		color: var(--text-main);
+		transition: all 250ms ease;
+
+		&:not(.active) {
+			@include underline-after;
 		}
+
+		// overriding mixin - need :not(.active) for specificity to be able to override
+		&:not(.active)::after {
+			background: var(--clr-primary);
+			height: 3px;
+		}
+
+		// change active link color
+		&.active {
+			// use primary color instead of accent color on active link
+			color: var(--clr-primary);
+		}
+	}
+
+	@media (min-width: $desktop) {
+		display: none;
 	}
 }
 
