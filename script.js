@@ -1,4 +1,6 @@
-AOS.init();
+if (window.AOS) {
+	AOS.init();
+}
 
 const links = document.querySelectorAll('.nav-links > li > a');
 const toggler = document.querySelector('.menu-toggler');
