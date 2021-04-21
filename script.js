@@ -30,14 +30,15 @@ function handleLinkClick(e) {
 	const clickedLinkPath = this.attributes.href.value;
 	styleActiveLink(clickedLinkPath);
 
-	// toggle checkbox value(checked) except when the user's on homepage and modal is not open.
-	// (just navigate to internal link without opening modal)
+	// toggle checkbox value(checked) only when the modal is open and it's internal link
+	// when link inside label is clicked, the targeted input value will not change.
+	// this is desired behaviour because when that happens,
+	// the user's intension is to navigate to that link, not to update any form values
 	const isModalOpen = toggler.checked;
 	const isHomePage = currentPath === '/';
-	if (isHomePage && !isModalOpen) {
-		return;
-	} else {
+	if (isHomePage && isModalOpen) {
 		toggler.click();
+		console.log('clicked');
 	}
 }
 

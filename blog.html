@@ -15,6 +15,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Roboto:wght@400;700&display=swap"
     rel="stylesheet">
+  <!-- Fix flash of unstyled content(FOUC)  -->
+  <style>
+    html {
+      transition: opacity .7s ease;
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
   <!-- Styles -->
   <link rel="stylesheet" href="styles/style.min.css" />
   <!-- Font Awesome -->
@@ -25,6 +33,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
     crossorigin="anonymous" />
+
 </head>
 
 <body>
@@ -186,4 +195,11 @@
   <!-- Script-->
   <script src="./script.js"></script>
 
+  <!-- Fix flash of unstyled content(FOUC)  -->
+  <style>
+    html {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
 </body>
