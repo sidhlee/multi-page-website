@@ -7,6 +7,7 @@
 /* Blog page layout */
 .container-blog-page {
 	--blog-main-y-offset: -10rem;
+	--aside-width: 20rem;
 	display: grid;
 
 	@media (min-width: $desktop) {
@@ -167,8 +168,10 @@
 			display: block;
 			position: relative;
 			bottom: 1em;
-			right: 7rem;
-			width: 140%;
+			// wrapper padding + inner padding
+			right: calc(var(--px) + var(--px-xs));
+			// column width + wrapper padding - inner padding
+			width: calc(var(--aside-width) + var(--px) - var(--px-xs));
 			height: 20rem;
 			background-image: url('../../images/side-bar-image.jpg');
 			background-position: center;
