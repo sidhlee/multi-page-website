@@ -132,8 +132,11 @@
 }
 
 .card-body {
-	padding: 2em 0;
+	padding: 2em var(--px);
 	text-align: center;
+	@media (min-width: $desktop) {
+		padding: 2em 0;
+	}
 }
 
 .feature-item {
