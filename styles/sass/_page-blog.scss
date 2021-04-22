@@ -21,6 +21,8 @@
 			// blog-image max width
 			max-width: 975px;
 			margin-top: var(--blog-main-y-offset);
+			// pull entire blog section to the right end
+			// and add right padding only to the text body
 			margin-right: calc(-1 * var(--px) + var(--shadow-offset));
 			margin-bottom: 2rem;
 
