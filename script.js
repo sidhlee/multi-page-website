@@ -116,7 +116,6 @@ function getGalleryButton(isRight = false) {
 		type: 'button',
 	});
 
-	const halfPaddingX = 'calc(var(--px) / 2)';
 	if (isRight) {
 		button.classList.add('gallery-btn-right');
 		button.innerHTML = '<i class="fas fa-chevron-right"></i>';
