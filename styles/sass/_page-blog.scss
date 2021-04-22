@@ -11,7 +11,7 @@
 	display: grid;
 
 	@media (min-width: $desktop) {
-		grid-template-columns: 20rem 2fr;
+		grid-template-columns: var(--aside-width) 2fr;
 		grid-template-rows: auto 1fr;
 		gap: Min(Max(1em, 5vw), 3em);
 
