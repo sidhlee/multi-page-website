@@ -34,10 +34,10 @@
 <body>
 
   <!-- Menu toggle button & menu modal using checkbox & label -->
-  <input class="menu-toggler sr-only" type="checkbox" id="menu-toggler">
+  <input class="menu-toggler sr-only" type="checkbox" id="menu-toggler" aria-haspopup="true" aria-controls="nav-modal">
   <label class="menu-btn" for="menu-toggler"><span></span></label>
   <label class="menu-modal" for="menu-toggler">
-    <nav class="nav nav-modal">
+    <nav id="nav-modal" class="nav nav-modal">
       <ul class="nav-links">
         <li><a href="/"><span class="link-text">Home</span></a></li>
         <li><a href="/#about"><span class="link-text">About</span></a></li>
