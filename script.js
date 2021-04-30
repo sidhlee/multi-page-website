@@ -41,7 +41,6 @@ function handleLinkClick(e) {
 	const isHomePage = currentPath === '/';
 	if (isHomePage && isModalOpen) {
 		toggler.click();
-		console.log('clicked');
 	}
 }
 
@@ -51,8 +50,9 @@ function handleLinkClick(e) {
  *  - Add one more item (400x400) to the right but it's hidden to the right of the viewport
  *  - when the user navigate to that hidden item making it visible in viewport, call API again, and add another
  * ==============================================*/
+
 const galleryElement = document.querySelector('.gallery');
-const galleryItemListElement = document.querySelector('.gallery ul');
+const galleryItemListElement = document.querySelector('.gallery-items');
 
 let itemCount = 3;
 // first gallery item in visible area
@@ -176,10 +176,13 @@ const app = {
 		});
 		// activate links
 		styleActiveLink(currentPath);
-		// add one more gallery item to the right
-		addGalleryItem();
-		// add carousel next/prev buttons
-		addGalleryButtons();
+
+		if (url.pathname === '/') {
+			// add one more gallery item to the right
+			addGalleryItem();
+			// add carousel next/prev buttons
+			addGalleryButtons();
+		}
 	},
 };
 
