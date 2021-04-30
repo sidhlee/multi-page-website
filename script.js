@@ -110,23 +110,6 @@ function addGalleryItem() {
 	insertElement(galleryItemElement, galleryItemListElement);
 }
 
-// Add gallery Button
-function getGalleryButton(isRight = false) {
-	const button = createElement('button', 'gallery-btn', {
-		type: 'button',
-	});
-
-	if (isRight) {
-		button.classList.add('gallery-btn-right');
-		button.innerHTML = '<i class="fas fa-chevron-right"></i>';
-	} else {
-		button.classList.add('gallery-btn-left');
-		button.innerHTML = '<i class="fas fa-chevron-left"></i>';
-	}
-
-	return button;
-}
-
 function slideGalleryItems(firstItemIndex) {
 	const right = `calc(${firstItemIndex} * (var(--gallery-item-width) + var(--gallery-gutter)))`;
 	galleryItemListElement.style.right = right;
@@ -150,15 +133,14 @@ function handleRightGalleryButtonClick() {
 	}
 }
 
-function addGalleryButtons() {
-	const leftButtonElement = getGalleryButton();
-	leftButtonElement.addEventListener('click', handleLeftGalleryButtonClick);
+function bindGalleryButtonClick() {
+	document
+		.querySelector('.gallery-btn-left')
+		.addEventListener('click', handleLeftGalleryButtonClick);
 
-	const rightButtonElement = getGalleryButton(true);
-	rightButtonElement.addEventListener('click', handleRightGalleryButtonClick);
-
-	insertElement(leftButtonElement, galleryElement, true);
-	insertElement(rightButtonElement, galleryElement);
+	document
+		.querySelector('.gallery-btn-right')
+		.addEventListener('click', handleRightGalleryButtonClick);
 }
 
 /* ===============================================
@@ -178,10 +160,10 @@ const app = {
 		styleActiveLink(currentPath);
 
 		if (url.pathname === '/') {
+			// bind carousel next/prev buttons with click event handlers
+			bindGalleryButtonClick();
 			// add one more gallery item to the right
 			addGalleryItem();
-			// add carousel next/prev buttons
-			addGalleryButtons();
 		}
 	},
 };
