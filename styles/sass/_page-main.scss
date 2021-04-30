@@ -224,20 +224,48 @@
 
 .gallery {
 	padding: var(--py) 0;
+	position: relative;
+	--gallery-gutter: 1rem;
+	.gallery-items-wrapper {
+		overflow: hidden;
+	}
 
 	ul {
-		display: flex;
+		--min-item-width: 200px;
+		--gallery-item-width: max(
+			calc((100% - 2 * var(--gallery-gutter)) / 3),
+			var(--min-item-width)
+		);
 
+		display: flex;
+		position: relative;
+		right: 0;
 		width: 100%;
 		margin: 0 auto;
-		overflow-x: hidden;
+		transition: right 300ms ease;
 
 		.gallery-item {
 			// don't shrink and just overflow
-			flex: 1 0 200px;
+			flex: 1 0 Max(var(--gallery-item-width), var(--min-item-width));
+			width: var(--gallery-item-width);
 			&:not(:last-of-type) {
-				margin-right: 1rem;
+				margin-right: var(--gallery-gutter);
 			}
 		}
+	}
+}
+
+.gallery-btn {
+	position: absolute;
+	top: 50%;
+	--half-px: calc(var(--px) / 2);
+	&.gallery-btn-right {
+		right: var(--half-px);
+		transform: translateX(50%);
+	}
+
+	&.gallery-btn-left {
+		left: var(--half-px);
+		transform: translateX(-50%);
 	}
 }
