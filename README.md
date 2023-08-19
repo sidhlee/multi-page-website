@@ -1,4 +1,6 @@
-# Bootcamp Project 1 - Multi-Page Site
+# Multi-Page Site - Planted
+
+🚀 Live Demo: https://responsive-multipage-site.netlify.app/
 
 ## Project Requirement
 
